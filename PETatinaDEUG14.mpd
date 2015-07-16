@@ -8,6 +8,7 @@
 /* bita ve ksi eniyileyimi eklenmis- */
 /* tir. Ksi, DEUG baglaminda eklem-  */
 /* lenen sayildir.                   */
+/* Son guncelleyim: 25 Aralik 2014   */
 /* ********************************* */
 
 DIGITS:=40:
@@ -259,26 +260,46 @@ end_proc:
 /* Dordullestirilim isleci tanimi    */
 /* ********************************* */
 
-squarificate(sq_F, sq_a)
+squarificate := proc(sq_F, sq_a)
 begin
-
+ sq_res:=0:
+ sq_i:=1:
+// print(sq_F):
+ for sq_i from 1 to n+1 do
+  sq_res:=sq_res+sq_a[sq_i,1]
+  *linalg::submatrix(sq_F,1..n+1,((n+1)*(sq_i-1)+1)..((n+1)*(sq_i-1)+1+n)):
+ end_for:
+ return(sq_res):
 end_proc:
-
-
 
 /* ********************************* */
 /* Dordullestirilmis dizeyleri       */
 /* ureten yapi 			     */
 /* ********************************* */
 
-S := proc(S_i,S_a)
+S := proc(S_i,S_a,S_F)
+option remember;
 begin
- S_ret = 0:
  if S_i = 0 then 
-   S_ret = Mat::identity(n+1):
- elif S_i = 0 then
-   return () 
-
+   S_ret := Mat::identity(n+1):
+ elif S_i = 1 then
+  S_ret := (squarificate(S_F,S_a)): 
+ elif S_i = 2 then
+  S_ret := (S(1, S_a, S_F)^2
+         +squarificate(S_F, S(1, S_a, S_F)*S_a)):
+ elif S_i = 3 then
+//  S_ret := 3*S(1, S_a, S_F)*S(2, S_a, S_F)
+//         -2*S(1, S_a, S_F)+squarificate(S_F, S(2, S_a, S_F)*S_a):
+ S_ret := squarificate(S_F,squarificate(S_F,squarificate(S_F,S_a)*S_a)*S_a)
+        +squarificate(S_F,S_a)*squarificate(S_F,squarificate(S_F,S_a)*S_a)
+        +squarificate(S_F,S_a)^3
+        +squarificate(S_F,squarificate(S_F,S_a)^2*S_a)
+        +2*squarificate(S_F,squarificate(S_F,S_a)*S_a)*squarificate(S_F,S_a):
+ else
+  print("oops"):
+  S_ret :=0 :
+ end_if:
+ return(S_ret):
 end_proc:
 
 
@@ -298,7 +319,7 @@ begin
 //  *(((1-exp(bita*t))/(-bita))^hhc_j)*T(hhc_j)
 //  *kroneckerPower(hhc_a_aug, hhc_j+1):
     hhc_summand:=1/(hhc_j!)\
-    *(((1-exp(bita*t))/(-bita))^hhc_j)*S(hhc_j,hhc_a_aug)
+    *(((1-exp(bita*t))/(-bita))^hhc_j)*S(hhc_j,hhc_a_aug, F_asil_faug(2))
     *hhc_a_aug:
   hhc_ret:=hhc_ret+hhc_summand:
  end_for: 
@@ -311,7 +332,7 @@ end_proc:
 /* sidir.			     */
 /* ********************************* */
 
-cozum:=hhc(4):
+cozum:=hhc(3):
 
 /* ********************************* */
 /* DEUG baglaminda eklemlenen sayi-  */
