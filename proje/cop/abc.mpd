@@ -1,0 +1,4 @@
+//PACKAGEPATH := "~/home/cosar/Desktop/", PACKAGEPATH:
+package("BelowDiagonalTraversal")
+//package("mypack")
+//g := BelowDiagonalTraversal::generator(4):

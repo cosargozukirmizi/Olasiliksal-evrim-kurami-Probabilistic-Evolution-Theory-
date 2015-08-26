@@ -1,0 +1,20 @@
+package("BelowDiagonalTraversal"):
+g := BelowDiagonalTraversal::generator(4):
+for i from 1 to 4!+3 do 
+ print(g()):
+end_for:
+
+h := BelowDiagonalTraversal::generator(5):
+sirali_yapi:=[0$5!]:
+for i from 1 to 5! do 
+ bdt:=h():
+ print(Unquoted,expr2text(bdt). " -> ". expr2text(BelowDiagonalTraversal::SpBubbleSortW1(bdt))):
+ sirali_yapi[i]:= BelowDiagonalTraversal::SpBubbleSortW1(bdt):
+end_for:
+
+orn:=stats::sample(sirali_yapi):
+orn_sirali:=stats::sortSample(stats::tabulate(orn)):
+print(orn_sirali):
+
+print(matrix(revert(stats::sample2list(stats::col(orn_sirali,6))))):
+quit:
