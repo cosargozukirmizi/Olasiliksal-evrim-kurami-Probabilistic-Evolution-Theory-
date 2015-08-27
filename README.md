@@ -14,7 +14,7 @@ dizeylerin etkin bir bicimde bulunumu icerilmektedir.
 # Olasiliksal-evrim-kurami-Probabilistic-Evolution-Theory-
 This package is for the solution of second degree multinomial 
 ordinary differential equation sets by way of probabilistic
-evolution theory. The initial value problem of these explicit ODE 
+evolution theory. The solution ofinitial value problem of these explicit ODE 
 systems relies on Kronecker power series. After the equation set 
 is taken to a certain form by using Constancy adding space extension, 
 the unknown functions are computed by the facilitation of squarification.
