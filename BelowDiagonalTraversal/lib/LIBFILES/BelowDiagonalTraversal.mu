@@ -74,7 +74,7 @@ domain BelowDiagonalTraversal
 /* ********************************* */
 
     SpBubbleSortW1 := proc(L)  
-			local it1; local it2; local n; local tmp;
+			local it1; local n; local tmp;
 			local swapped;
 		      begin
 		        n:=nops(L):

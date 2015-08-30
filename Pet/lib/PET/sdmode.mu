@@ -9,7 +9,7 @@
 Pet::sdmode := proc(F_0, F_1, F_2, bas_yoney, kerte=3)
 local F_asil; local F_asil_aug; local F_asil_faug;
 local n; local G12; local G22; local F_asil2_alt; 
-local J; local Jdiff; local tmpkok; save bita;
+local J; local Jdiff; save bita;
 begin
 F_asil(0):=F_0:
 F_asil(1):=F_1:

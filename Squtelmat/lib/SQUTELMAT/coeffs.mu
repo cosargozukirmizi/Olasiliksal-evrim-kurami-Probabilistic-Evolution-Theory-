@@ -12,7 +12,7 @@ package("BelowDiagonalTraversal"):
 Squtelmat::coeffs:=proc(n)
 local h; local bdt; local sirali_yapi;
 local i; local orn; local orn_sirali;
-local coeffs_ret;
+local coeffs_ret; local bdt;
 begin
 if(fopen("tmp/coeffs".expr2text(n)) = FAIL ) then
 	h := BelowDiagonalTraversal::generator(n):

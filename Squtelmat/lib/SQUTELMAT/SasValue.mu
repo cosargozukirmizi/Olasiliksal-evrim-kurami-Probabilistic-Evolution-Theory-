@@ -5,6 +5,7 @@
 /* ********************************* */
 
 Squtelmat::SasValue := proc(S_i, S_a, S_F)
+save a; save F; 
 begin
 	a := S_a:
 	F := S_F:

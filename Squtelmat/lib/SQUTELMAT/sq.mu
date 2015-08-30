@@ -11,7 +11,7 @@
 /* ********************************* */
 
 Squtelmat::sq := proc(sq_F, sq_a)
-local n;
+local n; local sq_res; local sq_i;
 begin
  n:=nops(sq_a)-1:
  sq_res:=0:
