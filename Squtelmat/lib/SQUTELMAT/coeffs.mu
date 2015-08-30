@@ -12,10 +12,10 @@ package("BelowDiagonalTraversal"):
 Squtelmat::coeffs:=proc(n)
 local h; local bdt; local sirali_yapi;
 local i; local orn; local orn_sirali;
-local coeffs_ret; local bdt;
+local coeffs_ret;  local siralanmamis;
 begin
 if(fopen("tmp/coeffs".expr2text(n)) = FAIL ) then
-	h := BelowDiagonalTraversal::generator(n):
+//	h := BelowDiagonalTraversal::generator(n):
 	sirali_yapi:=[0$n!]:
 
 /* ********************************* */
@@ -25,9 +25,11 @@ if(fopen("tmp/coeffs".expr2text(n)) = FAIL ) then
 /* durumuna getirilmesi		     */
 /* ********************************* */
 
+siralanmamis:=BelowDiagonalTraversal(n):
+
 	for i from 1 to n! do 
-		bdt:=h():
-		sirali_yapi[i]:= BelowDiagonalTraversal::SpBubbleSortW1(bdt):
+		sirali_yapi[i]:= BelowDiagonalTraversal::SpBubbleSortW1(siralanmamis[i]):
+		delete bdt:
 	end_for:
 
 /* ********************************* */
