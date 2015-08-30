@@ -6,5 +6,6 @@
 
 Squtelmat::treesList:=proc(n)
 begin
- return(combinat::binaryTrees::list(n)):
+ return(revert(map(combinat::dyckWords::list(n),
+    combinat::dyckWords::toBinaryTree))):
 end_proc:
