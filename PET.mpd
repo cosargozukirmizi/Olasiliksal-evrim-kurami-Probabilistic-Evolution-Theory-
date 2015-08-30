@@ -25,10 +25,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* yaklasimi ve degismezlik eklenim- */ 
 /* li uzay genisletimi ile cozumu i- */ 
 /* cin atilan adimlari icermektedir. */
-/* bita ve ksi eniyileyimi eklenmis- */
-/* tir. Ksi, DEUG baglaminda eklem-  */
-/* lenen sayildir.                   */
-/* Son guncelleyim: 24 Agustos 2015  */
+/* Dordulestirim olgusu baglaminda   */
+/* dogrusal birlestirimler ile dizey */
+/* katsayilar belirlenmistir. Dizey  */
+/* katsayilarin belirlenimi icin i-  */
+/* kili agac yapilari ile ilgili ba- */
+/* zi olgular kullanilmistir.        */
+/* Son guncelleyim: 30 Agustos 2015  */
 /* ********************************* */
 
 package("Squtelmat"):
@@ -147,8 +150,8 @@ end_proc:
 
 
 /* ********************************* */
-/* Butun dizey katsayilarin belirle- */
-/* nimi				     */
+/* Ilk uc dizey katsayisinin belir-  */
+/* lenimi			     */
 /* ********************************* */
 
 F_asil(0):=Mat(nops(R(x1,x2)),1):
@@ -179,7 +182,30 @@ a2:=.2:
 
 bas_yoney:=Mat([a1,a2]):
 
+/* ********************************* */
+/* Sag yani ikinci derece cokcokte-  */
+/* rimli olan siradan turevli belir- */
+/* tik denklem takiminin baslangic   */ 
+/* deger sorununu olasiliksal evrim  */
+/* kurami baglaminda cozen prosedure */
+/* yapilan cagri. Prosedurun son de- */
+/* gistirgesi kesme kertesidir. Don- */
+/* durdugu yapi ise, bir islev yone- */
+/* neyidir. 			     */
+/* ********************************* */
+
 cozum:=Pet::sdmode(F_asil(0), F_asil(1), F_asil(2), bas_yoney, 3):
+
+/* ********************************* */
+/* Bilinmeyen islevler icin elde e-  */
+/* dilen islevlerin belirli t deger- */
+/* lerinde elde ettigi degerlerin    */
+/* yazilarak bir cizelge olusturumu. */
+/* Yoneyin son ogesi degismezlik ek- */
+/* lenimli uzay genisletimi bagla-   */
+/* minda olusmustur ve gozardi edil- */
+/* mektedir. 			     */
+/* ********************************* */
 
 for it_i from 0 to 1 step 0.1 do 
  print(NoNL,expr2text(it_i)."\t".expr2text(evalAt(cozum[1,1]

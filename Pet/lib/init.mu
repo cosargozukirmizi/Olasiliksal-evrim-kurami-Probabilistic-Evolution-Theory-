@@ -1,4 +1,4 @@
-  // -------- file mypack/lib/init.mu --------
+  // -------- file Pet/lib/init.mu --------
   // load the library domain 'Pet'
   alias(path = pathname("LIBFILES")):
   Pet := loadproc(Pet, path, "Pet"):

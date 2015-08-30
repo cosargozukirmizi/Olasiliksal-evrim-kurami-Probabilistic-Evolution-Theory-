@@ -1,3 +1,15 @@
+/* ********************************* */
+/* Dordullestirimin tanimi. Dordul-  */
+/* lestirim, bir dikdortgen dizey ve */
+/* bir yoney alir. Yoney ogelerinin  */
+/* katsayilari oldugu, dizeyin dor-  */
+/* dul obeklerinin ise terimleri ol- */
+/* dugu bir dogrusal birlestirim u-  */
+/* retir. Bu dogrusal birlestirim i- */
+/* le olusan dizeyi deger olarak     */
+/* dondurur.      		     */
+/* ********************************* */
+
 Squtelmat::sq := proc(sq_F, sq_a)
 local n;
 begin

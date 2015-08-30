@@ -1,3 +1,11 @@
+/* ********************************* */
+/* Ana prosedur. Bu prosedur, degis- */
+/* mezlik eklenimli uzay genisletimi */
+/* baglaminda dizeylerin olusturulup */
+/* ana donguye cagri yapilmasini i-  */
+/* cermektedir.			     */
+/* ********************************* */
+
 Pet::sdmode := proc(F_0, F_1, F_2, bas_yoney, kerte=3)
 local F_asil; local F_asil_aug; local F_asil_faug;
 local n; local G12; local G22; local F_asil2_alt; 
@@ -66,49 +74,13 @@ F_asil_faug(2):=Mat::stackMatrix(F_asil_faug(2),F_asil2_alt):
 F_asil_faug(2):=F_asil_faug(2)
               *(Pet::permat(Mat::matdim(F_asil(1))[1]))^(-1):
 
+/* ********************************* */
+/* Asil donguye yapilan cagri. Prose-*/
+/* durun ilk degistirgeni, kesme ker-*/
+/* tesidir.			     */
+/* ********************************* */
 
-/* ********************************* */
-/* Asil yapiya yapilan cagri. Prose- */
-/* durun degistirgeni, kesme kerte-  */
-/* sidir.			     */
-/* ********************************* */
 cozum:=Pet::hhc(kerte, bas_yoney, F_asil_faug(2), bita):
-
-/* ********************************* */
-/* DEUG baglaminda eklemlenen sayi-  */
-/* lin eniyileyimi icin amac isle-   */
-/* vimsisinin belirtimi.             */
-/* ********************************* */
-
-//J:=((norm(F_asil(2),Frobenius)^2+1/2*(1/bk)\
-//*norm(F_asil(1),Frobenius)^2-(23*n+24)/((7*n+8)^2)\
-//*1/2*(1/bk)*linalg::tr(F_asil(1))^2+((1/bk)^2)
-//*norm(F_asil(0),Frobenius)^2))\
-//*(norm(Mat([a1,a2]),Frobenius)^2+bk):
-
-//Jdiff:=diff(J,bk):
-
-
-/* ********************************* */
-/* Amac islevimsisinden gelen eniyi- */
-/* lenmis degerlerin dordul islev    */
-/* koku belirlenimi ile bulunmasi    */
-/* ********************************* */
-
-//tmpkok:=(numeric::realroots(Jdiff,bk=0..100)[2]):
-
-/* ********************************* */
-/* Eniyilenmis degerin atanimi. Sim- */
-/* gecil duzeyde tutmak icin bu ata- */
-/* mayi yapmamak yeterlidir.         */
-/* ********************************* */
-
-//ksi:=sqrt((tmpkok[1]+tmpkok[2])/2):
-
-/* ********************************* */
-/* Belirli t degerleri icin cozumun  */
-/* ekrana yazimi                     */
-/* ********************************* */
 
 return(cozum):
 end_proc:

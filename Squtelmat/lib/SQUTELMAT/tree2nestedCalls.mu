@@ -1,3 +1,11 @@
+/* ********************************* */
+/* Bu prosedur, bir agaci betimleyen */
+/* dizinler dizinini simge katari o- */
+/* larak alir. Ic ice dordullesti-   */
+/* rimlerin carpimini betimleyen     */
+/* simge katarini dondurur.	     */
+/* ********************************* */
+
 Squtelmat::tree2nestedCalls := proc(str)
 local pos; 
 begin
@@ -7,7 +15,6 @@ begin
  pos:=pos[1]:
  str:=substring(str, 1 .. pos):
  str:="(".str:
-// print(str):
  str:=stringlib::subs(str, ", []" = ", a)"):
  str:=stringlib::subs(str, "[]" = ""):
  str:=stringlib::subs(str, "F, " = "Squtelmat::sq(F,"):

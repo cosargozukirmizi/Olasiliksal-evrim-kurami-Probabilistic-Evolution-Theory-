@@ -1,4 +1,4 @@
-  // -------- file mypack/lib/init.mu --------
+  // -------- file Squtelmat/lib/init.mu --------
   // load the library domain 'Squtelmat'
   alias(path = pathname("LIBFILES")):
   Squtelmat := loadproc(Squtelmat, path, "Squtelmat"):

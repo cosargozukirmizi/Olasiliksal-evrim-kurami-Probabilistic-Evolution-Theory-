@@ -1,4 +1,4 @@
-  // -------- file mypack/lib/init.mu --------
+  // -------- file BelowDiagonalTraversal/lib/init.mu --------
   // load the library domain 'BelowDiagonalTraversal'
   alias(path = pathname("LIBFILES")):
   BelowDiagonalTraversal := loadproc(BelowDiagonalTraversal, path, "BelowDiagonalTraversal"):

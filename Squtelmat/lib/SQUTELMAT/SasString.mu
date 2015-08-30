@@ -1,3 +1,12 @@
+/* ********************************* */
+/* n dugumlu butun ikili agac yapi-  */
+/* larini olusturur. Bunlari kulla-  */
+/* narak, dordullestirilmis irakgo-  */
+/* rur dizeyini, prosedur cagrilari- */
+/* nin dogrusal birlestirimi olan    */
+/* bir simge katari olarak dondurur. */
+/* ********************************* */
+
 Squtelmat::SasString := proc(n)
 local str; local agaclar; local coeffStr;
 local i; local coeffs; local agac;

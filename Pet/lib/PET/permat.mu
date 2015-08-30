@@ -1,3 +1,15 @@
+/* ********************************* */
+/* Bu prosedur, bir yerdegistirim    */
+/* dizeyi uretir. Yerdegistirim di-  */
+/* zeyinin kullanim amaci, degismez- */
+/* lik eklenimli uzay genisletimi i- */
+/* le olusan yapinin daha kolay is-  */
+/* lenimidir. Kolaylik, obekler ice- */
+/* ren yapilarin Kronecker usluleri- */
+/* nin, obeklerin Kronecker usluleri */
+/* biciminden yazimidir.	     */
+/* ********************************* */
+
 Pet::permat:=proc(pm_n)
 local pm_retmat; local pm_i; local pm_temp;
 begin

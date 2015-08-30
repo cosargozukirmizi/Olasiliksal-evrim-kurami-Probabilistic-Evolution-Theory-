@@ -1,3 +1,9 @@
+/* ********************************* */
+/* Bu prosedur, dordullestirilmis i- */
+/* rakgorur dizeyini, sayisal deger  */
+/* biciminde uretir.	 	     */
+/* ********************************* */
+
 Squtelmat::SasValue := proc(S_i, S_a, S_F)
 begin
 	a := S_a:
