@@ -18,12 +18,12 @@ the Kronecker square of the vector.
 
 A simple example is as follows.
 
-  >> package("Pet");
-  >> package("Squtelmat");
-  >> Mat := Dom::Matrix();
+    >> package("Pet");
+    >> package("Squtelmat");
+    >> Mat := Dom::Matrix();
 
                                                                      Dom::Matrix()
-  >> Pet::permat(2);
+    >> Pet::permat(2);
 
                                                             +-                           -+
                                                             |  1, 0, 0, 0, 0, 0, 0, 0, 0  |
