@@ -194,7 +194,7 @@ bas_yoney:=Mat([a1,a2]):
 /* neyidir. 			     */
 /* ********************************* */
 
-cozum:=Pet::sdmode(F_asil(0), F_asil(1), F_asil(2), bas_yoney, 5):
+cozum:=Pet::sdmode(F_asil(0), F_asil(1), F_asil(2), bas_yoney, 7):
 
 /* ********************************* */
 /* Bilinmeyen islevler icin elde e-  */
