@@ -14,9 +14,7 @@ A simple working example is as follows.
     >> package("Squtelmat");
     >> Squtelmat::SasString(3);
 
-    "(Squtelmat::sq(F,a) * Squtelmat::sq(F,a) * Squtelmat::sq(F,a))+(Squtelmat::sq(F,a) * Squtelmat::sq(F,Squtelmat::sq(F,a) * a))+2*(Squtelmat::sq(F,Squt\
-elmat::sq(F,a) * a) * Squtelmat::sq(F,a))+(Squtelmat::sq(F,Squtelmat::sq(F,a) * Squtelmat::sq(F,a) * a))+(Squtelmat::sq(F,Squtelmat::sq(F,Squtelmat::s\
-q(F,a) * a) * a))"
+    "(Squtelmat::sq(F,a) * Squtelmat::sq(F,a) * Squtelmat::sq(F,a))+(Squtelmat::sq(F,a) * Squtelmat::sq(F,Squtelmat::sq(F,a) * a))+2*(Squtelmat::sq(F,Squtelmat::sq(F,a) * a) * Squtelmat::sq(F,a))+(Squtelmat::sq(F,Squtelmat::sq(F,a) * Squtelmat::sq(F,a) * a))+(Squtelmat::sq(F,Squtelmat::sq(F,Squtelmat::sq(F,a) * a) * a))"
 
 ## RETURN VALUES
 
