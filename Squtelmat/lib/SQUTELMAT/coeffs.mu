@@ -41,9 +41,9 @@ siralanmamis:=BelowDiagonalTraversal(n):
 	orn_sirali:=stats::sortSample(stats::tabulate(orn)):
 
 	coeffs_ret:=(matrix(revert(stats::sample2list(stats::col(orn_sirali,n+1))))):
-	fprint(Text, "tmp/coeffs".expr2text(n), coeffs_ret):
+	fprint("tmp/coeffs".expr2text(n), coeffs_ret):
 else 
-	coeffs_ret:=fread("tmp/coeffs".expr2text(n)):
+	coeffs_ret:=finput("tmp/coeffs".expr2text(n)):
 end_if:
 	return(coeffs_ret):
 end_proc:
