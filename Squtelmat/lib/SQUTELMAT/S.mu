@@ -5,7 +5,7 @@
 /* ********************************* */
 
 Squtelmat::S := proc(S_i, S_a, S_F)
-save a; save F; save k; save j;
+save a; save F; save k; save j; save S_top;
 option remember;
 begin
 	a := S_a:
