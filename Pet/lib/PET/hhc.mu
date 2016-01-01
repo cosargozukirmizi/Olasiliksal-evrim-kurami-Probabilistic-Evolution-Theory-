@@ -18,7 +18,7 @@ begin
  hhc_ret:=0:
  for hhc_j from 0 to hhc_k do 
     hhc_summand:=1/(hhc_j!)\
-    *(((1-exp(bita*t))/(-bita))^hhc_j)*Squtelmat::SasValue(hhc_j,hhc_a_aug, hhc_f)
+    *(((1-exp(bita*t))/(-bita))^hhc_j)*Squtelmat::S(hhc_j,hhc_a_aug, hhc_f)
     *hhc_a_aug:
   hhc_ret:=hhc_ret+hhc_summand:
  end_for: 

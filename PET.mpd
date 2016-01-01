@@ -31,7 +31,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* katsayilarin belirlenimi icin i-  */
 /* kili agac yapilari ile ilgili ba- */
 /* zi olgular kullanilmistir.        */
-/* Son guncelleyim: 30 Agustos 2015  */
+/* Son guncelleyim: 1 Ocak 2016      */
 /* ********************************* */
 
 package("Squtelmat"):
@@ -194,7 +194,7 @@ bas_yoney:=Mat([a1,a2]):
 /* neyidir. 			     */
 /* ********************************* */
 
-cozum:=Pet::sdmode(F_asil(0), F_asil(1), F_asil(2), bas_yoney, 7):
+cozum:=Pet::sdmode(F_asil(0), F_asil(1), F_asil(2), bas_yoney, 200):
 
 /* ********************************* */
 /* Bilinmeyen islevler icin elde e-  */
