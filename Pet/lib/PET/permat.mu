@@ -11,7 +11,7 @@
 /* ********************************* */
 
 Pet::permat:=proc(pm_n)
-local pm_retmat; local pm_i; local pm_temp;
+local pm_retmat; local pm_i; local pm_temp; save Mat;
 begin
 pm_retmat:=Mat(1,pm_n^2+2*pm_n+1):
 pm_retmat[1,1]:=1:
