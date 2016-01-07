@@ -9,10 +9,9 @@
 /* ********************************* */
 
 Pet::hhc := proc(hhc_k,hhc_by,hhc_f,bita)
-local hhc_rv; local hhc_a_aug; local hhc_summand;
+local hhc_a_aug; local hhc_summand;
 local hhc_j; local hhc_ret;
 begin
- hhc_rv:=0:
  hhc_a_aug:=linalg::stackMatrix(hhc_by,[ksi]):
  hhc_summand:=0:
  hhc_ret:=0:

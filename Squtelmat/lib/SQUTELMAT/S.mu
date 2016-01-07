@@ -5,14 +5,12 @@
 /* ********************************* */
 
 Squtelmat::S := proc(S_i, S_a, S_F)
-save a; save F; save k; save j; save S_top;
+save k; save j; save S_top;
 option remember;
 begin
-	a := S_a:
-	F := S_F:
 	j := S_i:
 	if S_i = 0 then
-		return(matrix::identity(nops(a))):
+		return(matrix::identity(nops(S_a))):
 	elif S_i > 0 then
 		S_top:=0:
 		for k from 0 to j-1 do 
