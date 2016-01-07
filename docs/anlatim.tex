@@ -1,0 +1,1264 @@
+\documentclass[a4paper,10pt]{article}
+\renewcommand{\refname}{Kaynaklar}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 10.0in}]{geometry}
+\usepackage[FIGTOPCAP]{subfigure}
+\usepackage{tikz-qtree}
+\usetikzlibrary{graphdrawing, graphs}
+\usepackage{tikz}
+\usepackage{framed}
+\usegdlibrary{trees, layered}
+\usepackage{hyperref}
+\usepackage{doi}
+
+%opening
+\title{D\"ord\"ulle\c{s}tirilmi\c{s} \i rakg\"or\"ur dizeylerinin 
+belirlenimi}
+\author{Co\c{s}ar G\"oz\"uk\i rm\i z{\i}}
+\date{30 Aral\i k 2015}
+\linespread{1.5}
+\renewcommand{\figurename}{\c{C}izim}
+\begin{document}
+\maketitle
+
+\section{Giri\c{s}}
+
+Olas\i l\i ksal evrim kuram{\i} (OEK) ba\u{g}lam\i nda yap\i lan %
+\c{c}al\i \c{s}malar \"ozellikle sa\u{g} yan{\i} ikinci de\-rece %
+\c{c}ok\c{c}okterimli olan belirtik s\i radan t\"urevli denklem t%
+ak\i mlar\i n\i n ba\c{s}lang\i \c{c} de\u{g}er so\-rununun \c{c}%
+\"oz\"um\"u i\c{c}in \"onemli ayg\i tlar olu\c{s}turumuna olanak %
+sa\u{g}lamaktad\i r. Birim dizeyler ile Kronecker \c{c}arp\i m ku%
+llanarak dizey boyutlar\i n\i n b\"uy\"ut\"uld\"u\u{g}\"u yap\i d%
+an ka\c{c}\i nmak i\c{c}in d\"ord\"ulle\c{s}tirim olgusu g\"undem%
+e getirilmi\c{s}tir. D\"ord\"ulle\c{s}tirilmi\c{s} \i rakg\"or\"u%
+r dizeylerinin kullan\i m{\i}, boyutlar{\i} de\u{g}i\c{s}meyen di%
+zey ve y\"oneylerle \c{c}al\i \c{s}may{\i} olanakl{\i} k\i lmakta%
+d\i r.
+
+\section{Olas\i l\i ksal evrim kuram{\i}}
+
+Olas\i l\i ksal evrim kuram{\i} ile sa\u{g} yan{\i} ikinci de\-re%
+ce \c{c}ok\c{c}okterimli olan belirtik std \c{c}\"oz\"um\"u %
+%------------------------------(1)-----------------------------------%
+\begin{equation}
+\mathbf{x} = {\rm e}^{\beta t}
+\sum\limits_{j=0}^{\infty}\frac{1}{j!}%
+\left(\frac{{\rm e}^{\beta t}-1}{\beta}\right)^{j}%
+\mathbf{T}_{j}
+\mathbf{a}^{\otimes (j+1)}
+\label{eq:XNCbh}
+\end{equation}
+%------------------------------(1)-----------------------------------%
+bi\c{c}imindedir. D\"ord\"ulle\c{s}tirim kullan{\i}m{\i} ise %
+%------------------------------(2)-----------------------------------%
+\begin{equation}
+ \mathbf{T}_{j} \mathbf{a}^{\otimes (j+1)} = 
+ \mathbf{S}_{j}(\mathbf{a})
+ \mathbf{a}, \quad j=0,1,\ldots
+\label{eq:AN8En}
+\end{equation}
+%------------------------------(2)-----------------------------------%
+yap\i s\i n{\i} \"ong\"or\"ur. D\"or\-d\"ul\-le\c{s}ti\-rimin tan%
+\i m{\i} %
+%------------------------------(3)-----------------------------------%
+\begin{equation}
+ \lfloor \mathbf{F} , \mathbf{a} \rceil = 
+ \sum_{i=1}^{n} a_{i} \mathbf{F}^{(i)}
+\label{eq:vWTnF}
+\end{equation}
+%------------------------------(3)-----------------------------------%
+bi\c{c}imindedir. $\mathbf{F}^{(i)}$ ile belirtilen d\"ord\"ul di%
+zeyler, $\mathbf{F}$ dizeyinin \"obekleridir. Ge\-rek\-li olan ol%
+gu $\mathbf{S}_{j}(\mathbf{a})$ dizeylerinin d\"ord\"ulle\c{s}tir%
+imler bi\c{c}iminden yaz\i m\i d\i r. %
+
+\section{D\"ord\"ulle\c{s}tirim}
+
+OEK ba\u{g}lam\i nda g\"undeme gelen \i rakg\"or\"ur dizeyleri da%
+ha belirtik bir anlat\i mla g\"undeme getirilebilir. %
+
+Irakg\"or\"ur dizeylerinin yap\i s{\i}, %
+%------------------------------(4)-----------------------------------%
+\begin{equation}
+{\bf T}_j=\prod_{k=1}^j{\bf M}_k
+\end{equation}
+%------------------------------(4)-----------------------------------%
+bi\c{c}imindedir. Irakg\"or\"ur\"un b\"ol\"umleri ise %
+%------------------------------(5)-----------------------------------%
+\begin{equation}
+{\bf M}_j=\sum_{k=0}^{j-1}\left({\bf I}_n^{\,\otimes k}%
+\otimes{\bf F}\otimes{\bf I}_n^{\,\otimes j-k-1}\right) 
+\end{equation}
+%------------------------------(5)-----------------------------------%
+olarak g\"undeme gelir. %
+
+En ba\c{s}taki birka\c{c} terim %
+%------------------------------(6)-----------------------------------%
+\begin{equation}
+{\bf M}_1 = {\bf F}
+\end{equation}
+%------------------------------(6)-----------------------------------%
+%------------------------------(7)-----------------------------------%
+\begin{equation}
+{\bf M}_2 = \left({\bf F}\otimes{\bf I}\right)
++\left({\bf I}\otimes{\bf F}\right)
+\end{equation}
+%------------------------------(7)-----------------------------------%
+%------------------------------(8)-----------------------------------%
+\begin{equation}
+{\bf M}_3 = \left({\bf F}\otimes{\bf I}^{\otimes 2}\right)
++\left({\bf I}\otimes{\bf F}\otimes{\bf I}\right)
++\left({\bf I}^{\otimes 2}\otimes{\bf F}\right)
+\end{equation}
+%------------------------------(8)-----------------------------------%
+bi\c{c}imindedir. Tan\i m olarak %
+%------------------------------(9)-----------------------------------%
+\begin{equation}
+ {\bf T}_{0} =  {\bf I}
+\end{equation}
+%------------------------------(9)-----------------------------------%
+olarak g\"undeme gelmektedir. Yi\-ne ko\-layl\i kla g\"or\"ulebil%
+ece\u{g}i gibi %
+%------------------------------(10)-----------------------------------%
+\begin{equation}
+ {\bf T}_{1} = {\bf F}
+\end{equation}
+%------------------------------(10)-----------------------------------%
+yap\i s\i ndad\i r. Bir sonraki \i rakg\"or\"ur dizeyi ise %
+%------------------------------(11)-----------------------------------%
+\begin{eqnarray}
+ {\bf T}_{2} &=& {\bf F}\big[\left({\bf F}\otimes{\bf I}\right)
++\left({\bf I}\otimes{\bf F}\right)\big] \nonumber\\
+&=&{\bf F}\left({\bf F}\otimes{\bf I}\right)+
+{\bf F}\left({\bf I}\otimes{\bf F}\right)
+\label{eq:aqweq}
+\end{eqnarray}
+%------------------------------(11)-----------------------------------%
+olarak kar\c{s}\i m\i za \c{c}\i kar. Benzer inceleyi\c{s} ile, %
+%------------------------------(12)-----------------------------------%
+\begin{eqnarray}
+{\bf T}_{3} &=& {\bf F} \big[\left({\bf F}\otimes{\bf I}\right)
++\left({\bf I}\otimes{\bf F}\right)\big]
+\big[ \left({\bf F}\otimes{\bf I}^{\otimes 2}\right)
++\left({\bf I}\otimes{\bf F}\otimes{\bf I}\right)
++\left({\bf I}^{\otimes 2}\otimes{\bf F}\right) \big]
+\end{eqnarray}
+%------------------------------(12)-----------------------------------%
+elde edilebilir.
+
+$\mathbf{S}_{j}(\mathbf{a})$ dizeylerinin bulunumu i\c{c}in ilgil%
+i yap\i lar{\i} kul\-la\-narak ve \c{c}arp\i m ve Kronecker \c{c}%
+arp\i m\i n birbirleri \"uzerinde da\u{g}\i lma \"ozelli\u{g}ini %
+g\"oz \"on\"unde bulundurarak iler\-le\-ne\-bilir. Bu bi\-\c{c}im%
+de, $\mathbf{S}_{j}(\mathbf{a})$ dizeyleri e\c{s}siz bi\c{c}imde %
+elde edilebilir. Bu bulunum, cebircil in\-dirgeyi\c{s} i\-\c{c}er%
+ir. Cebircil indirdeyi\c{s}in sa\-y\i c\i l o\-larak bi\c{c}eleni%
+\c{s}i, bulunumu kolayla\c{s}t\i r\i r. D\"ord\"ulle\c{s}tirim ce%
+brinin say\i c\i l bi\c{c}e\-le\-ni\-\c{s}i, \c{c}a\-l\i \c{s}man%
+\i n \c{c}ekirde\u{g}ini olu\c{s}turmaktad\i r.
+
+(\ref{eq:aqweq}) ba\u{g}\i nt\i s\i nda $\mathbf{T}_{2}$ i\c{c}in a%
+\c{c}\i k\c{c}a g\"osterildi\u{g}i gibi, b\"ut\"un \i rakg\"or\"u%
+r dizeylerinin toplamc\i l terimleri vard\i r. Her toplamc\i l te%
+rim, $\mathbf{F}$'nin i\c{c}inde bir kere bulundu\u{g}u \c{c}arpa%
+nlardan olu\c{s}ur. Bu \c{c}arpanlar\-da i\-se $\mathbf{F}$'nin s%
+a\u{g}\i nda ve solunda $0$ ya da daha b\"uy\"uk say\i da birim d%
+izeyin Kronecker \c{c}arp\i m{\i} bulunmaktad\i r. Bi\-rim dizeyi%
+n Kronecker \"usl\"us\"u yerine, bu birim dizeylerin ardarda Kron%
+ecker \c{c}arp\i m ile belirtik olarak ya\-z\i ld\i \u{g}{\i} yap%
+{\i} d\"u\c{s}\"un\"ul\"urse, her bir \c{c}arpanda $\mathbf{F}$'n%
+in konumu bir tamsay{\i} ile g\"osterilebilir. Bu i\c{s}lem, her %
+bir terim i\c{c}in yinelenebilir. $\mathbf{T}_{2}$ i\c{c}in somut%
+la\c{s}t\i rmak gerekirse, $\mathbf{T}_{2}$ iki di\-zi\-lim ile e%
+\c{s}siz bi\c{c}imde nitelendirilebilir. Bu dizilimler %
+%------------------------------(13)-----------------------------------%
+\begin{eqnarray}
+ 1\quad 2 \nonumber\\
+ 1\quad 1
+\end{eqnarray}
+%------------------------------(13)-----------------------------------%
+dizilimleridir. Dizilimlerde birince say{\i}, birinci \c{c}arpand%
+aki $\mathbf{F}$'nin yerini, ikinci say{\i} ise ikinci \c{c}arpan%
+daki $\mathbf{F}$'nin yerini g\"osterir. Asl\i nda birinci \c{c}a%
+rpanda yaln\i zca bir yer oldu\u{g}u i\c{c}in, dizilimin birinci %
+\"o\u{g}esi yaln\i zca $1$ de\u{g}erini alabilir. Dizilimin ikinc%
+i \"o\u{g}esi ise $1$ ve $2$ de\u{g}er\-lerini alabilir. Burada g%
+\"ozlemlenmesi gereken olgu, di\-zilimlerin bir alt\"u\c{c}\-gen %
+i\c{c}erisinde g\"undeme gelebilecek b\"ut\"un ya\-p\i lar ol\-du%
+\u{g}udur. %
+
+Benzer bir inceleme ile, $\mathbf{T}_{3}$ i\c{c}in %
+%------------------------------(14)-----------------------------------%
+\begin{eqnarray}
+ 1\quad 2 \quad 3 \nonumber\\
+ 1\quad 2 \quad 2 \nonumber\\
+ 1\quad 2 \quad 1 \nonumber\label{eq:121}\\
+ 1\quad 1 \quad 3 \nonumber\label{eq:113}\\
+ 1\quad 1 \quad 2 \nonumber\\
+ 1\quad 1 \quad 1
+\end{eqnarray}
+%------------------------------(14)-----------------------------------%
+elde edilebilir. $\mathbf{T}_{2}$'deki b\"ut\"un dizilimlerin aza%
+lmayan nitelikte ol\-ma\-s\i na kar\c{s}\i n, $\mathbf{T}_{3}$'de%
+ki $1\; 2\; 1$ dizilimi azalan nitelik\-tedir. $\mathbf{T}_{3}$ i%
+\c{c}in, b\"ut\"un dizilimlere kar\c{s}\i l\i k gelen \c{c}arpanl%
+ar ilgili y\"oney Kronecker \"usl\"us\"u i\-le ay\-r{\i} ayr{\i} %
+\c{c}arp\i l\i r ise, $1\; 2\; 1$ ve $1\; 1\; 3$ dizilimlerine ka%
+r\c{s}\i l\i k gelen yap\i lar\i n ayn{\i} katk\i y{\i} \"urettik%
+leri g\"ozlemlenebilir. Bu olgu d\"ord\"ulle\c{s}tirim cebrinde k%
+endini a\c{c}\i k olarak g\"ostermektedir. Bunun nedeni, \c{c}arp%
+anlar aras\i nda \"ozel bir de\u{g}i\c{s}tirimin ge\c{c}erli olma%
+s\i d\i r. Bu bulgu somut olarak %
+%------------------------------(15)-----------------------------------%
+\begin{equation}
+ {\bf F}\left({\bf I}\otimes{\bf F}\right)%
+ \left({\bf F}\otimes{\bf I}^{\otimes 2}\right)
+ {\bf a}^{\otimes 4} = {\bf F}\left({\bf F}\otimes{\bf I}\right)
+ \left({\bf I}^{\otimes 2}\otimes{\bf F}\right){\bf a}%
+^{\otimes 4}
+\end{equation}
+%------------------------------(15)-----------------------------------%
+olarak g\"osterilebilir. Bu iki katk{\i} birbirine e\-\c{s}it old%
+u\u{g}u i\c{c}in, bir kez belirleyip, $2$ kat\-sa\-y{\i}\-s{\i} i%
+\-le \c{c}arpmak daha verimli bir yol olarak g\"or\"ulmektedir. %
+
+Ayn{\i} katk\i y{\i} \"uretecek olan dizilimler, dizilimlerin ken%
+dilerini kullanarak somut ad\i mlarla belirlenebilir ve bu ad\i m%
+lar asl\i nda d\"ord\"ulle\c{s}tirim ceb\-ri\-nin bir yans{\i}mas%
+{\i}d\i r. Terimlerin tamsay{\i} katsay\i lar\i n\i n bulunumu ol%
+arak da de\u{g}erlendirilebilecek bu i\c{s}lem i\c{c}in \"onerile%
+n y\"ontem kabarc\i kl{\i} s\i ralay{\i}\c{s}{\i} temel alan \"oz%
+el kabarc\i kl{\i} s\i ralay\i \c{s} y\"ontemidir. Ka\-barc{\i}kl%
+{\i} s\i ralay\i \c{s}, dizilimdeki arda\c{s}\i k \"o\u{g}elerin %
+kar\c{s}\i la\c{s}t\i r\i l\i p, e\u{g}er s\i raya ay\-k{\i}r{\i}%
+l{\i}k s\"oz konusu ise, \"o\u{g}elerin yer de\u{g}i\c{s}\-tirimi%
+ne dayan\i r. Bu i\c{s}lem azalmayan s\i ralan\i m elde edene kad%
+ar yinelenir. \"Ozel kabarc\i kl{\i} s\i ralay\i \c{s} i\-le kaba%
+rc\i kl{\i} s\i ralay\i \c{s} aras\i nda \"onemli ve yal\i n bir %
+ayr\i m vard\i r. \"Ozel kabarc\i kl{\i} s\i ralay\i \c{s}ta yer %
+de\u{g}i\c{s}tirimi yap\i l\i rken, so\-la aktar\i lan \"o\u{g}en%
+in de\u{g}erinin korunmas\i na kar\c{s}\i n, sa\u{g}a aktar{\i}la%
+n \"o\u{g}enin de\u{g}eri bir art\i r\i l\i r. Dolay{\i}s\i yla, %
+\"ozel kabarc\i kl{\i} s\i ralay\i \c{s} \"o\u{g}e de\u{g}erlerin%
+i de\u{g}i\c{s}tirir. %
+
+$\mathbf{T}_{3}$ ba\u{g}lam{\i}nda g\"un\-de\-me ge\-len diziliml%
+er i\c{c}in bu olguyu \"orneklendirelim. Yap\i lmas{\i} gereken s%
+\i ral{\i} olmayan dizilimlerin belirlenip, bu di\-zilimlerin han%
+g{\i} s\i ral{\i} (azalmayan) dizilimlerle e\c{s}de\u{g}erli oldu%
+\u{g}unun bulunmas{\i}d\i r. $\mathbf{T}_{3}$ i\c{c}in yal\-n{\i}%
+zca bir adet azalabilen dizilim bulunmaktad\i r: $1\; 2\; 1$. \"O%
+zel kabarc\i kl{\i} s\i ralay\i \c{s}\i n ad\i mlar{\i} \c{s}u bi%
+\c{c}imdedir. %
+\begin{itemize}
+ \item 1 ile 2 s\i ral{\i} m{\i}: Evet.
+ \item 2 ile 1 s\i ral{\i} m{\i}: Hay\i r. $2$'ye $1$ ekle ve sa%
+ \u{g}\i ndaki $1$ ile yer de\u{g}i\c{s}tir.
+ Yeni dizilim: $1\; 1\; 3$.
+ \item 1 ile 1 s\i ral{\i} m{\i}: Evet.
+ \item 1 ile 3 s\i ral{\i} m{\i}: Evet.
+\end{itemize}
+Bu ba\u{g}lamda $1\; 2\; 1$'in \"ozel ka\-bar\-c\i kl{\i} s\i ral%
+ay\i \c{s}tan ge\c{c}mi\c{s} bi\c{c}imi $1\; 1\; 3$ di\-zi\-limid%
+ir. Dolay\i s\i yla, alt\"u\c{c}gendeki azalmayan dizilimleri olu%
+\c{s}turup, bu dizilimlerin herbirine bir de tam\-sa\-y{\i} katsa%
+y{\i} e\c{s}le\c{s}tirmek yoluna gidi\-lebilir. $\mathbf{T}_{3}$ %
+i\c{c}in azalmayan nitelikteki dizilimler %
+%------------------------------(16)-----------------------------------%
+\begin{eqnarray}
+ 1\quad 2 \quad 3 \nonumber\\
+ 1\quad 2 \quad 2 \nonumber\\
+ 1\quad 1 \quad 3 \nonumber\\
+ 1\quad 1 \quad 2 \nonumber\\
+ 1\quad 1 \quad 1
+\end{eqnarray}
+%------------------------------(16)-----------------------------------%
+bi\c{c}imindedir. Bu yap{\i}ya kar\c{s}\i l\i k gelen katsay{\i} %
+dizilimi ise %
+%------------------------------(17)-----------------------------------%
+\begin{equation}
+1\quad 1\quad 2\quad 1\quad 1
+\label{eq:j3ise}
+\end{equation}
+%------------------------------(17)-----------------------------------%
+olarak kar\c{s}\i m\i za \c{c}\i kmak\-tad\i r. $j=3$ du\-ru\-mu %
+i\c{c}in azalmayan ni\-te\-lik\-te\-ki di\-zi\-lim\-le\-rin sa\-y%
+{\i}s{\i} $5$'t\i r. Bu say{\i}, Catalan diziliminde, $n$=$3$ %
+durumuna kar\c{s}\i l\i k gelen say\i d\i r. Catalan diziliminin %
+genel terimi %
+%------------------------------(18)-----------------------------------%
+\begin{equation}
+ C_{n} = \frac{1}{n+1}{2n \choose n} = \frac{2n!}{(n+1)!n!} \, ,
+ \quad n=0,1,2,\ldots
+\end{equation}
+%------------------------------(18)-----------------------------------%
+olarak tan\i mlanmaktad\i r.
+
+$\mathbf{T}_{4}$ i\c{c}in de ayn{\i} ad\i mlar uygulanabilir. Alt%
+\"u\c{c}gendeki b\"ut\"un dizilimler %
+%------------------------------(19)-----------------------------------%
+\begin{eqnarray}
+ 1\quad 2\quad 3\quad 4\nonumber\\
+ 1\quad 2\quad 3\quad 3\nonumber\\
+ 1\quad 2\quad 3\quad 2\nonumber\\
+ 1\quad 2\quad 3\quad 1\nonumber\\
+ 1\quad 2\quad 2\quad 4\nonumber\\
+ 1\quad 2\quad 2\quad 3\nonumber\\
+ 1\quad 2\quad 2\quad 2\nonumber\\
+ 1\quad 2\quad 2\quad 1\nonumber\\
+ 1\quad 2\quad 1\quad 4\nonumber\\
+ 1\quad 2\quad 1\quad 3\nonumber\\
+ 1\quad 2\quad 1\quad 2\nonumber\\
+ 1\quad 2\quad 1\quad 1\nonumber\\
+ 1\quad 1\quad 3\quad 4\nonumber\\
+ 1\quad 1\quad 3\quad 3\nonumber\\
+ 1\quad 1\quad 3\quad 2\nonumber\\
+ 1\quad 1\quad 3\quad 1\nonumber\\
+ 1\quad 1\quad 2\quad 4\nonumber\\
+ 1\quad 1\quad 2\quad 3\nonumber\\
+ 1\quad 1\quad 2\quad 2\nonumber\\
+ 1\quad 1\quad 2\quad 1\nonumber\\
+ 1\quad 1\quad 1\quad 4\nonumber\\
+ 1\quad 1\quad 1\quad 3\nonumber\\
+ 1\quad 1\quad 1\quad 2\nonumber\\
+ 1\quad 1\quad 1\quad 1
+\end{eqnarray}
+%------------------------------(19)-----------------------------------%
+bi\c{c}imdedir. Bu dizilimlerden yaln\i zca ond\"ort adedi azalma%
+yan dizilimlerdir. On\-d\"ort say\i s{\i}, be\c{s}inci Catalan sa%
+y\i s\i d\i r. Azalmayan dizilimler, %
+%------------------------------(20)-----------------------------------%
+\begin{eqnarray}
+ 1\quad 2\quad 3\quad 4\nonumber\\
+ 1\quad 2\quad 3\quad 3\nonumber\\
+ 1\quad 2\quad 2\quad 4\nonumber\\
+ 1\quad 2\quad 2\quad 3\nonumber\\
+ 1\quad 2\quad 2\quad 2\nonumber\\
+ 1\quad 1\quad 3\quad 4\nonumber\\
+ 1\quad 1\quad 3\quad 3\nonumber\\
+ 1\quad 1\quad 2\quad 4\nonumber\\
+ 1\quad 1\quad 2\quad 3\nonumber\\
+ 1\quad 1\quad 2\quad 2\nonumber\\
+ 1\quad 1\quad 1\quad 4\nonumber\\
+ 1\quad 1\quad 1\quad 3\nonumber\\
+ 1\quad 1\quad 1\quad 2\nonumber\\
+ 1\quad 1\quad 1\quad 1
+\end{eqnarray}
+%------------------------------(20)-----------------------------------%
+bi\c{c}imindedir. Bir azalan dizilimin hangi azalmayan dizilime k%
+ar\c{s}\i l\i k geldi\u{g}ini belirlemek i\c{c}in \"ozel ka\-barc%
+\i kl{\i} s\i ralay\i \c{s} g\"un\-dem\-de\-dir. Bu i\c{s}lem yap%
+\i ld\i ktan sonra, b\"ut\"un a\-zal\-mayan dizilimlere bir tamsa%
+y{\i} \c{c}arpan e\c{s}lik ettirilebilir. Bu tamsay{\i} \c{c}arpa%
+nlar\i n olu\c{s}turdu\u{g}u dizilim ise % 
+%------------------------------(21)-----------------------------------%
+\begin{equation}
+1\quad 1\quad 2\quad 1\quad 1\quad 3\quad 3\quad 3\quad %
+1\quad 1\quad 3\quad 2\quad 1\quad 1 
+\label{eq:j4ise}
+\end{equation}
+%------------------------------(21)-----------------------------------%
+bi\c{c}imindedir. Burada g\"ozlem\-len\-me\-si ge\-re\-ken olgu, %
+(\ref{eq:j4ise}) diziliminin (\ref{eq:j3ise}) dizilimini ba\c{s}t%
+an ba\c{s}\-la\-yan bir alt\-di\-zi\-lim olarak i\c{c}eriyor olma%
+s\i d\i r. %
+
+Catalan dizilimi OEIS olarak bilinen an\-siklopedide A000108 olar%
+ak kay\i tl\i d\i r. Do\-la\-y{\i}s\i yla, $j.$ Ca\-ta\-lan sa\-y%
+\i s{\i}, A000108($j$) olarak g\"osterilebilir. Catalan dizilimin%
+in birinci de\u{g}i\c{s}imleri ise A000245 olarak ka\-y{\i}tl{\i}%
+d{\i}r. Bu \c{c}al\i \c{s}ma ba\u{g}lam\i nda g\"undeme gelen kat%
+say\i lar dizilimi ise A262180 olarak kaydedilmi\c{s}tir. %
+
+$\mathbf{T}_{j}$ i\c{c}in A000108($j$+1) adet azalmayan dizilim o%
+lu\c{s}maktad\i r. Bu di\-zi\-lim\-le\-rin tamsay{\i} katsay\i la%
+r\i n{\i} i\c{c}eren katsay{\i} dizilimi ise \"o\-zel kabarc\i kl%
+{\i} s\i ralay\i \c{s}{\i} kul\-la\-narak belirlenebilir. Bu kats%
+ay{\i} dizilimi, $\mathbf{T}_{j-1}$ i\c{c}in olu\c{s}turulan kats%
+ay{\i} dizilimini ba\c{s}tan ba\c{s}layan bir altdizilim olarak i%
+\c{c}erir. Dolay\i s\i yla katsay{\i} dizilimi A262180, d\"uzensi%
+z bir \"u\c{c}gen olu\c{s}turur. Bu d\"uzensiz \"u\c{c}gen %
+%------------------------------(22)-----------------------------------%
+\begin{eqnarray}
+&[1]& 1 \nonumber\\
+&[2]& 1 \nonumber\\
+&[3]& 2\quad 1\quad 1 \nonumber\\
+&[4]& 3\quad 3\quad 3\quad 1\quad 1\quad 3\quad %
+2\quad 1\quad 1 \nonumber\\
+&\vdots&  \vdots
+\end{eqnarray}
+%------------------------------(22)-----------------------------------%
+yap\i s\i ndad\i r. \"U\c{c}\-ge\-nin $j.$ s{\i}ras{\i}, $j>1$ is%
+e, A000245($j$) terimlidir. %  
+
+Herhangi bir azalmayan dizilimin hangi azalabilen dizilim\-lerle %
+e\c{s}\-de\-\u{ger} ol\-du\-\u{g}u\-nu bul\-mak i\c{c}in, \"ozel %
+kabar\-c\i k\-l{\i} s\i rabozu\c{s} kullan\i labilir. \"Ozel kaba%
+rc\i kl{\i} s\i rabozu\c{s}, \"ozel kabarc\i kl{\i} s{\i}\-ra\-la%
+y{\i}\c{s}\i n evrik i\c{s}lemidir. Dizili\-min $(j+1)$in\-ci \"o%
+\u{g}esinin $j$inci \"o\u{g}esinden en az iki daha b\"uy\"uk oldu%
+\u{g}u b\"ut\"un yerler imlenerek s\i rabozu\c{s}a ba\c{s}lanabil%
+ir. Bu yer\-ler\-de $(j+1)$'inci \"o\u{g}eden bir \c{c}\i kar\i l%
+\i p $j$'inci \"o\u{g}e ile yer de\u{g}i\c{s}\-tirerek yeni bir d%
+al yarat\i l\i r. \.I\c{s}lem yeni olu\c{s}an her dizilimde yinel%
+enir. E\u{g}er daha \"once elde edilmi\c{s} bir dizilim yeniden e%
+lde edilir ise o dalda ilerlenmez. Bu ba\u{g}lamda azalmayan dizi%
+lime kar\c{s}\i l\i k gelen b\"ut\"un azalabilen dizilimler bulun%
+abilir. %
+
+Buradaki \"onemli a\c{s}amalardan biri, dizilimden ilgili toplamd%
+izi katk\i s\i n\i n elde edinimidir. Bu i\c{s}lem, do\u{g}rudan %
+dizilimi inceleyerek yap\i labilir, ama bir ara ayg\i t olarak ik%
+ili a\u{g}a\c{c}lar\i n kullan\i m{\i} bu i\c{s}lemi kolayla\c{s}%
+t\i r\i r. Her azalmayan dizilim i\c{c}in bir ikili a\u{g}a\c{c} %
+\"uretimi s\"oz konusudur. Dizilim \"o\u{g}eleri s{\i}\-ra i\-le %
+i\c{s}lenir. \.Ilk \"o\u{g}e k\"ok\"u olu\c{s}turur. Bir sonraki %
+\"o\u{g}e ayn{\i} de\u{g}erde ise, bu yeni ek\-le\-necek olan \"o%
+\u{g}e sol \c{c}ocu\u{g}u olu\c{s}turur. Bir sonraki \"o\-\u{g}en%
+in de\u{g}eri, a\u{g}aca konmu\c{s} olan \"o\u{g}enin de\u{g}erin%
+den bir b\"uy\"uk ise, sa\u{g} \c{c}ocuk olu\c{s}ur. Ye\-ni gelin%
+en \"o\u{g}ede dizilimin bir sonraki terimi incelenir ve ayn{\i} %
+ad\i mlar yinelenir. E\u{g}er son eklenen \"o\u{g}e i\-le ye\-ni %
+\"o\u{g}e aras\i ndaki de\u{g}i\c{s}im 2 ya da daha b\"u\-y\"uk i%
+se, s\i ral{\i} gezini\c{s}te (ing: inorder traversal) ilgi\-li d%
+e\u{g}er kadar ilerideki yere konumland\i r\i m ger\c{c}ekle\c{s}%
+tirilir. Asl\i nda bu i\c{s}lem, azalabilen dizilimler i\c{c}in d%
+e tan\i mlanabilir ve o durumda, azal\i m noktas\i nda s{\i}\-ral%
+{\i} gezini\c{s}te daha geride bir konuma konumland\i r\i m ile y%
+\"ontem genelle\c{s}tirilebilir. Bu bi\c{c}imde genelle\c{s}ti\-r%
+im yap\i l\i nca, \"ozel kabarc\i kl{\i} s{\i}ra\-lay{\i}\c{s} al%
+t{\i}nda ayn{\i} dizilimi \"ureten dizilimlerin ay\-n{\i} a\u{g}a%
+c{\i} \"urettikleri g\"ozlemlenir. A\u{g}a\c{c} olu\c{s}turuldukt%
+an sonra, d\"u\u{g}\"um de\u{g}erlerinin bir \"onemi yoktur. \"On%
+emli olan a\u{g}ac\i n yap\i s\i d\i r. D\"u\u{g}\"um de\u{g}erle%
+ri a\u{g}ac\i n yap\i s\i nda, \"ozlerini dolayl{\i} olarak bulun%
+durur. \.Ikinci, \"u\c{c}\"unc\"u ve d\"ord\"unc\"u d\"or\-d\"ull%
+e\c{s}tirilmi\c{s} \i rakg\"or\"ur dizeyleri ba\u{g}\-la\-m{\i}nd%
+a g\"undeme gelen a\u{g}a\c{c} yap{\i}lar{\i}, s{\i}\-ra\-s{\i}yl%
+a \c{c}izim 1,2 ve 3'te verilmi\c{s}\-tir. $\mathbf{S}_{1}$'e kar%
+\c{s}\i l\i k gelen a\u{g}a\c{c} i\-se, bir d\"u\u{g}\"um\-l\"u a%
+\u{g}a\c{c}t\i r. %
+
+\begin{figure}
+\centering
+\caption{$\mathbf{S}_{2}$ ba\u{g}lam\i nda g\"undeme gelen 
+ikili a\u{g}a\c{c} yap\i lar{\i}}
+\begin{tabular}{|c|c|}
+\hline
+ (a) 12 & (b) 11 \\
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+a -- {{} ,{b}}
+}; &
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+a -- {{b} ,{}}
+}; \\
+&\\
+\hline
+\end{tabular}
+\end{figure}
+%\begin{figure}
+%\centering
+%\caption{$\mathbf{S}_{2}$ ba\u{g}lam\i nda g\"undeme gelen 
+%ikili a\u{g}a\c{c} yap\i lar{\i}}
+%\subfigure[12]{
+%\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+%sibling distance=5mm, level distance=5mm]
+%\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+%a -- {{} ,{b}}
+%};
+%}
+%\unskip\ \vrule\
+%\subfigure[11]{
+%\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+%sibling distance=5mm, level distance=5mm]
+%\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+%a -- {{b} ,{}}
+%};
+%}
+%\end{figure}
+\begin{figure}
+\centering
+\caption{$\mathbf{S}_{3}$ ba\u{g}lam\i nda g\"undeme gelen ikili 
+a\u{g}a\c{c} yap\i lar{\i}}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+(a) 123 & (b) 122 & (c) 121 & (\c{c}) 113 & (d) 112 & (e) 111 \\
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { , e -- { , f } } }};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { , e -- { f} } }};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { b , e  } }}; &
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { b , e  } }}; &
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { e --  {, f} } }};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+a -- e -- f
+};\\
+&&&&&\\
+\hline
+\end{tabular}
+\end{figure}
+%\begin{figure}
+%\centering
+%\caption{$\mathbf{S}_{3}$ ba\u{g}lam\i nda g\"undeme gelen ikili 
+%a\u{g}a\c{c} yap\i lar{\i}}
+%\subfigure[123]{
+%\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+%sibling distance=5mm, level distance=5mm]
+%\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+%{ a -- { , e -- { , f } } }};
+%}
+%\unskip\ \vrule\
+%\subfigure[122]{
+%\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+%sibling distance=5mm, level distance=5mm]
+%\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+%{ a -- { , e -- { f} } }};
+%}
+%\unskip\ \vrule\
+%\subfigure[121]{
+%\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+%sibling distance=5mm, level distance=5mm]
+%\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+%{ a -- { b , e  } }}; 
+%}
+%\unskip\ \vrule\
+%\subfigure[113]{
+%\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+%sibling distance=5mm, level distance=5mm]
+%\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+%{ a -- { b , e  } }}; 
+%}
+%\unskip\ \vrule\
+%\subfigure[112]{
+%\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+%sibling distance=5mm, level distance=5mm]
+%\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+%{ a -- { e --  {, f} } }};
+%}
+%\unskip\ \vrule\
+%\subfigure[111]{
+% \tikz [baseline=(a.base), tree layout, minimum number of children=2,
+% sibling distance=5mm, level distance=5mm]
+% \graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+% a -- e -- f
+% };
+% }
+% \end{figure}
+
+\begin{figure}
+\centering
+\caption{$\mathbf{S}_{4}$ ba\u{g}lam\i nda g\"undeme gelen ikili 
+a\u{g}a\c{c} yap\i lar{\i}}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+(a) 1234 & (b) 1233 & (c) 1232 & (\c{c}) 1231 & (d) 1224 & (e) 1223 & (f) 1222 & (g) 1221 \\
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { , e -- { , f -- { , g} } } }
+}; &
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { , e -- { , f -- { g, } } } }
+}; &
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { , e -- {f , g  } } }
+}; &
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { e, f -- { , g  } } }
+}; &
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { , e -- {f , g  } } }
+}; &
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { , e -- { f  -- { , g} } } }
+}; &
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { , e -- { f  -- {g , } } } }
+}; &
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { b , e -- { f  } } }
+}; \\
+&&&&&&&\\
+\hline
+(h) 1214 & ({\i}) 1213 & (i) 1212 & (j) 1211 & (k) 1134 & (l) 1133 & (m) 1132 & (n) 1131 \\
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { b , e -- { , f  } } }
+};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { b , e -- { f  } } }
+};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{e -- { f -- {,b}, g}} 
+};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{e -- { b -- c, g}} 
+};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { b , e -- { , f  } } }
+};& 
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { b , e -- { f  } } }
+};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{e -- { f -- {,b}, g}} 
+};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{e -- {  b -- c, g}} 
+};\\
+&&&&&&&\\
+\hline
+(o) 1124 & (\"o) 1123 & (p) 1122 & (r) 1121 & (s) 1114 & (\c{s}) 1113 & (t) 1112 & (u) 1111 \\
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{e -- { f -- {,b}, g}} 
+};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+b -- { a -- { , f -- { , g  } } } 
+};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+b -- { a -- { , f -- { g,   } } } 
+};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{e -- { f -- {c,b}}} 
+};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{e -- { b -- c, g}} 
+};& 
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{e -- { f -- {c,b}}} 
+};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{a -- { b -- c -- {,d}}} 
+};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{a -- { b -- c -- {d}}} 
+};\\
+&&&&&&&\\
+\hline
+\end{tabular}
+\end{figure}
+
+% \begin{figure}
+% \centering
+% \caption{$\mathbf{S}_{4}$ ba\u{g}lam\i nda g\"undeme gelen ikili 
+% a\u{g}a\c{c} yap\i lar{\i}}
+% \subfigure[1234]{
+% \tikz [baseline=(a.base), tree layout, minimum number of children=2,
+% sibling distance=5mm, level distance=5mm]
+% \graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+% { a -- { , e -- { , f -- { , g} } } }
+% };
+% }
+% \unskip\ \vrule\
+% \subfigure[1233]{
+% \tikz [baseline=(a.base), tree layout, minimum number of children=2,
+% sibling distance=5mm, level distance=5mm]
+% \graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+% { a -- { , e -- { , f -- { g, } } } }
+% };
+% }
+% \unskip\ \vrule\
+% \subfigure[1232]{
+% \tikz [baseline=(a.base), tree layout, minimum number of children=2,
+% sibling distance=5mm, level distance=5mm]
+% \graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+% { a -- { , e -- {f , g  } } }
+% };
+% }
+% \unskip\ \vrule\
+% \subfigure[1231]{
+% \tikz [baseline=(a.base), tree layout, minimum number of children=2,
+% sibling distance=5mm, level distance=5mm]
+% \graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+% { a -- { e, f -- { , g  } } }
+% };
+% }
+% \unskip\ \vrule\
+% \subfigure[1224]{
+% \tikz [baseline=(a.base), tree layout, minimum number of children=2,
+% sibling distance=5mm, level distance=5mm]
+% \graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+% { a -- { , e -- {f , g  } } }
+% };
+% }
+% \unskip\ \vrule\
+% \subfigure[1223]{
+% \tikz [baseline=(a.base), tree layout, minimum number of children=2,
+% sibling distance=5mm, level distance=5mm]
+% \graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+% { a -- { , e -- { f  -- { , g} } } }
+% };
+% }
+% \unskip\ \vrule\
+% \subfigure[1222]{
+% \tikz [baseline=(a.base), tree layout, minimum number of children=2,
+% sibling distance=5mm, level distance=5mm]
+% \graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+% { a -- { , e -- { f  -- {g , } } } }
+% };
+% }
+% \unskip\ \vrule\
+% \subfigure[1221]{
+% \tikz [baseline=(a.base), tree layout, minimum number of children=2,
+% sibling distance=5mm, level distance=5mm]
+% \graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+% { a -- { b , e -- { f  } } }
+% };
+% } \\ 
+% 
+% \subfigure[1214]{
+% \tikz [baseline=(a.base), tree layout, minimum number of children=2,
+% sibling distance=5mm, level distance=5mm]
+% \graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+% { a -- { b , e -- { , f  } } }
+% };
+% }
+% \unskip\ \vrule\
+% \subfigure[1213]{
+% \tikz [baseline=(a.base), tree layout, minimum number of children=2,
+% sibling distance=5mm, level distance=5mm]
+% \graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+% { a -- { b , e -- { f  } } }
+% };
+% }
+% \unskip\ \vrule\
+% \subfigure[1212]{
+% \tikz [baseline=(a.base), tree layout, minimum number of children=2,
+% sibling distance=5mm, level distance=5mm]
+% \graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+% {e -- { f -- {,b}, g}} 
+% };
+% }
+% \unskip\ \vrule\
+% \subfigure[1211]{
+% \tikz [baseline=(a.base), tree layout, minimum number of children=2,
+% sibling distance=5mm, level distance=5mm]
+% \graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+% {e -- { b -- c, g}} 
+% };
+% }
+% \unskip\ \vrule\
+% \subfigure[1134]{
+% \tikz [baseline=(a.base), tree layout, minimum number of children=2,
+% sibling distance=5mm, level distance=5mm]
+% \graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+% { a -- { b , e -- { , f  } } }
+% };
+% }
+% \unskip\ \vrule\
+% \subfigure[1133]{
+% \tikz [baseline=(a.base), tree layout, minimum number of children=2,
+% sibling distance=5mm, level distance=5mm]
+% \graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+% { a -- { b , e -- { f  } } }
+% };
+% }
+% \unskip\ \vrule\
+% \subfigure[1132]{
+% \tikz [baseline=(a.base), tree layout, minimum number of children=2,
+% sibling distance=5mm, level distance=5mm]
+% \graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+% {e -- { f -- {,b}, g}} 
+% };
+% }
+% \unskip\ \vrule\
+% \subfigure[1131]{
+% \tikz [baseline=(a.base), tree layout, minimum number of children=2,
+% sibling distance=5mm, level distance=5mm]
+% \graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+% {e -- {  b -- c, g}} 
+% };
+% }
+% %\end{figure}
+% 
+% %\begin{figure}
+% %\centering
+% %\caption{$\mathbf{S}_{4}$ devam{\i}}
+% \subfigure[1124]{
+% \tikz [baseline=(a.base), tree layout, minimum number of children=2,
+% sibling distance=5mm, level distance=5mm]
+% \graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+% {e -- { f -- {,b}, g}} 
+% };
+% }
+% \unskip\ \vrule\
+% \subfigure[1123]{
+% \tikz [baseline=(a.base), tree layout, minimum number of children=2,
+% sibling distance=5mm, level distance=5mm]
+% \graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+% b -- { a -- { , f -- { , g  } } } 
+% };
+% }
+% \unskip\ \vrule\
+% \subfigure[1122]{
+% \tikz [baseline=(a.base), tree layout, minimum number of children=2,
+% sibling distance=5mm, level distance=5mm]
+% \graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+% b -- { a -- { , f -- { g,   } } } 
+% };
+% }
+% \unskip\ \vrule\
+% \subfigure[1121]{
+% \tikz [baseline=(a.base), tree layout, minimum number of children=2,
+% sibling distance=5mm, level distance=5mm]
+% \graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+% {e -- { f -- {c,b}}} 
+% };
+% }
+% \unskip\ \vrule\
+% \subfigure[1114]{
+% \tikz [baseline=(a.base), tree layout, minimum number of children=2,
+% sibling distance=5mm, level distance=5mm]
+% \graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+% {e -- { b -- c, g}} 
+% };
+% }
+% \unskip\ \vrule\
+% \subfigure[1113]{
+% \tikz [baseline=(a.base), tree layout, minimum number of children=2,
+% sibling distance=5mm, level distance=5mm]
+% \graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+% {e -- { f -- {c,b}}} 
+% };
+% }
+% \unskip\ \vrule\
+% \subfigure[1112]{
+% \tikz [baseline=(a.base), tree layout, minimum number of children=2,
+% sibling distance=5mm, level distance=5mm]
+% \graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+% {a -- { b -- c -- {,d}}} 
+% };
+% }
+% \unskip\ \vrule\
+% \subfigure[1111]{
+% \tikz [baseline=(a.base), tree layout, minimum number of children=2,
+% sibling distance=5mm, level distance=5mm]
+% \graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+% {a -- { b -- c -- {d}}} 
+% };
+% }
+% \end{figure}
+
+A\u{g}a\c{c}tan dizey cebircil yap\i ya ge\-\c{c}i\c{s} i\-\c{c}i%
+n s\i ral{\i} gezini\c{s} kullan\i labilir. S\i ral{\i} ge\-zi\-n%
+i\c{s}in kural{\i}, her d\"u\u{g}\"um i\-\c{c}in \"on\-ce sol alt%
+a\u{g}ac{\i}n i\c{s}lenmesi, sonra d\"u\u{g}\"um\"un kendisinin i%
+\c{s}lenmesi ve daha sonra sa\u{g} alta\u{g}ac\i n i\c{s}lenmesid%
+ir. Bu olgu, ba\c{s}lang\i \c{c} noktas{\i} olarak, k\"okten olab%
+ildi\u{g}ince kez sol \c{c}ocu\u{g}a ge\c{c}i\c{s}e neden olur. B%
+ir d\"u\u{g}\"um, yaln{\i}z ba\c{s}\i na, bir d\"ord\"ulle\c{s}ti%
+rime kar\c{s}\i l\i k gelmektedir. Daha somut s\"oylemek gerekirs%
+e, bir d\"u\u{g}\"um, yaln{\i}z ba\c{s}{\i}na d\"u\-\c{s}\"un\"ul%
+d\"u\u{g}\"unde, $ \lfloor \mathbf{F} , \mathbf{a} \rceil $ ya\-p%
+\i s\i n{\i} betimler. Dolay\i s{\i}yla, s\i ral{\i} gezini\c{s}i%
+n ba\c{s}lang\i \c{c} noktas{\i} budur. Soldan ebe\-veyne ge\c{c}%
+i\c{s}, sol alta\u{g}a\c{c}taki yap\i n\i n d\"ord\"ulle\c{s}tiri%
+mini olu\c{s}turur. S{\i}ra\-l{\i} gezini\c{s} ba\u{g}lam\i nda, %
+d\"u\u{g}\"umden sa\u{g} \c{c}o\-cu\u{g}a ge\-\c{c}i\c{s} i\-se s%
+a\u{g} alta\u{g}ac\i n olu\c{s}turdu\u{g}u yap{\i} i\-le sa\u{g}d%
+an \c{c}arpmaya kar\c{s}\i l\i k gelir. Bu ba\u{g}lamda, a\u{g}ac%
+a yaln\i zca bakarak bile, nas\i l bir dizey cebircil yap{\i} olu%
+\c{s}turdu\u{g}u ile ilgili bir\c{s}eyler s\"oy\-lemek o\-la\-nak%
+l\i d\i r. %
+
+A\u{g}a\c{c}\-tan di\-zey ceb\-rine ge\-\c{c}i\c{s} i\-\c{c}in, a%
+\u{g}ac\i n dizin g\"osterilimi kullan\i labilir. A\u{g}ac\i n di%
+zin g\"osterilimi, b\"ut\"un a\u{g}ac{\i} \"u\c{c} \"o\-\u{g}eli %
+bir dizin olarak ele al\i r. Bu dizinin birinci \"o\u{g}esi sol a%
+lta\u{g}a\c{c}a kar\c{s}\i l\i k gelen dizin, ikinci \"o\u{g}esi %
+k\"ok, \"u\c{c}\"unc\"u \"o\u{g}esi ise sa\u{g} alta\u{g}a\c{c}a %
+kar\c{s}\i l\i k gelen dizindir. Alta\u{g}a\c{c}lar i\c{c}in de a%
+yn{\i} i\c{s}lem uygulan\i r ve i\c{c} i\c{c}e dizin\-ler yap{\i}%
+s{\i} kurulur. Buradan dizey cebircil yap{\i}\-ya ge\c{c}i\c{s} i%
+\c{c}in, di\-zin i\c{s}\-le\-me\-ye da\-ha uy\-gun o\-lan i\c{s}l%
+ev\-cil buy\-ruk\-di\-zi\-le\-yi\c{s} yak\-la\-\c{s}{\i}\-m{\i} k%
+ul\-la\-n{\i}\-la\-bi\-le\-ce\-\u{g}i gi\-bi, bir k{\i}\-sa\-yol %
+o\-la\-rak, simge katar{\i} i\c{s}lenimi y\"ontemi kullan{\i}labi%
+lir. Dizin g\"osterilimi bir simge katar{\i} olarak d\"u\c{s}\"un%
+\"ul\"up, \"uzerinde baz{\i} yal\i n i\c{s}lemler yap{\i}l\i r is%
+e, ilgili i\c{c} i\-\c{c}e i\c{s}\-lev \c{c}a\u{g}r\i lar{\i} yap%
+\i s{\i} olu\c{s}turulabilir. O\-lu\c{s}\-tu\-rulan bu k\i sa bet%
+ik \c{c}al\i \c{s}t\i r\i larak, dizeycil katk{\i} elde edilebili%
+r. \.Ilgili betik yap{\i}s{\i}n{\i}n bu ba\u{g}\-lamda kullan{\i}%
+m{\i} a\c{s}a\u{g}\i daki \"ornek betikte g\"osterilmi\c{s}tir. %
+\begin{verbatim}
+>> package("Squtelmat");
+>> alias(d = combinat::trees::dummyLabel):
+>> bt:=combinat::binaryTrees([d, [d, [d, [d, [], []], []],[d, [], []]], []]);
+
+                                                                        o
+                                                                       /
+                                                                      /\
+                                                                     /
+>> Squtelmat::tree2nestedCalls(bt);
+
+                  "(Squtelmat::sq(F,Squtelmat::sq(F,Squtelmat::sq(F,Squtelmat::sq(F,
+                  a) * a) * a) * Squtelmat::sq(F,a) * a))"
+\end{verbatim}
+
+\section{Betikleyi\c{s}}
+
+Be\-tik\-le\-yi\c{s}, \textit{U\-bun\-tu Li\-nux} or\-tam\i nda, %
+\textit{MuPAD Pro Version 4.0.6} ile ya\-p\i l\-m{\i}\c{s}\-t{\i}%
+r. \textit{PET}, \textit{Squtelmat} ve \textit{BelowDiagonalTrave%
+rsal} adlar\i nda \"u\c{c} ayr{\i} okunakl\i k ve bu okunakl\i kl%
+ar{\i} kullanan betik olu\c{s}turulmu\c{s}tur. S\i nay\i\c{s} ama%
+\c{c}l{\i} olarak da ad\i mlar at\i lm\i \c{s}t\i r. Bunlardan bi%
+ri, OEK ba\u{g}lam\i nda elde edilen denklem \c{c}\"oz\"um\"un\"u%
+n ayr\i kla\c{s}t\i r\i m tabanl{\i} y\"ontemlerle kar\-\c{s}\i l%
+a\c{s}t\i r\i m\i d\i r. Bu ba\u{g}lamdaki \c{c}al\i \c{s}malar d%
+erinle\c{s}tirilecektir. Bir di\u{g}er s\i nay\i \c{s} ise, d\"or%
+d\"ulle\c{s}tirim \"uzerinedir. D\"ord\"ulle\c{s}tirim kullan\i l%
+an OEK y\"ontemi ile kullan\i lmayan OEK y\"ontemi kar\-\c{s}\i l%
+a\c{s}t\i r\i lm\i \c{s}, sonu\c{c}lar aras{\i}n\-da tam \"ort\"u%
+\c{s}\"um g\"or\"ulm\"u\c{s}t\"ur. Bu s\i nay\i \c{s}larda $j=8$ %
+durumuna kadar \c{c}\i k\i lm\i \c{s}t\i r. %
+
+\section{\.Ileri konular}
+
+Y\"ontemi kullanarak $j=8$ ya da $j=9$ durumundan \"oteye ge\c{c}%
+mek, yap\i n\i n \c{s}u anki durumuyla olanakl{\i} g\"or\"unmemek%
+tedir. Bunu olanakl{\i} k\i lmak i\c{c}in kuramc\i l geli\c{s}tir%
+imler gereklidir. Betikte en \"onemli zaman al\i c{\i} olgu, kats%
+ay{\i} diziliminin belirleni\c{s}idir. Bu katsay{\i} diziliminin %
+std tak{\i}m\i ndan ba\u{g}\i ms\i z oldu\u{g}u u\-nutulmamal\i d%
+\i r. Bu nedenle, bir kez belir\-lenimi ve tutamak ya da veritaba%
+n\i nda saklan\i m{\i} yeterlidir. Di\u{g}er \"o\-nem\-li zaman a%
+l\i c{\i} olgu ise dizey ya da y\"oney katk\i lar\i n belirle\-ni%
+mi ve toplan\i m\i d\i r. Burada baz{\i} k\"u\c{c}\"uk iyile\c{s}%
+tirimler yap\i labilir. Ama as\i l h\i zland\i r\i m, ancak d\"or%
+d\"ulle\c{s}tirilmi\c{s} \i rakg\"or\"ur dizeyleri a\-ras\i nda b%
+ir \"ozyineleyi\c{s} elde edinimi ile olabilir. Bu \"oz\-yineleyi%
+\c{s}in elde edinimi i\c{c}in ad\i mlar at\i lm\i \c{s}t\i r. %
+
+Bunun i\c{c}in ba\-z{\i} g\"oz\-lem\-ler\-le yola \c{c}\i k\i lma%
+l\i d{\i}r. \.Ilk g\"oz\-lem $\mathbf{S}_{j+1}$ i\-\c{c}e\-ri\-si%
+nde $\mathbf{S}_{j}$'nin b\"u\-t\"u\-n\"u\-n\"un d\"or\-d\"ul\-le%
+\c{s}\-ti\-ri\-mi\-nin bulun\-du\u{g}u\-dur. Bu\-nun an\-lam{\i} %
+$\mathbf{S}_{j}$'nin b\"u\-t\"un terimlerinin d\"ord\"ulle\c{s}ti%
+riminin ayn{\i} katsay{\i}larla ken\-di\-ni g\"os\-ter\-me\-si\-d%
+ir. \.I\-kin\-ci ol\-gu ise $\mathbf{S}_{j}$'nin b\"u\-t\"un teri%
+m\-le\-ri\-nin sol\-dan $\lfloor \mathbf{F} , \mathbf{a} \rceil$ %
+ile \c{c}ar\-p{\i}m{\i}n{\i}n ay\-n{\i} kat\-sa\-y{\i}\-lar\-la, %
+$\mathbf{S}_{j+1}$ i\c{c}inde bulunma\-s{\i}d{\i}r. Ge\-ri kalan %
+(A000108($j$+2)$-2\times$A000108($j$+1)) te\-rim ise yine somut olarak %
+$\mathbf{S}_{j}$ ile ili\c{s}kilendi\-ri\-le\-bil\-me\-si\-ne kar%
+\c{s}\i n daha \c{c}apra\c{s}\i k yap\i dad\i r. %
+
+Bir yaz\i m olgusu olarak %
+%------------------------------(23)-----------------------------------%
+\begin{equation}
+ \mathbf{S}_{j} \equiv \left(\mathbf{F},\mathbf{a}\right)^{dj}
+\end{equation}
+%------------------------------(23)-----------------------------------%
+g\"osterilimi kullan\i lacakt\i r. \"Usteldeki $d$ simgesi d\"ord%
+\"ulle\c{s}tirimi \c{c}a\u{g}r\i \c{}st\i rmakta, bu simgenin yan%
+\i ndaki say\i l ise ka\c{c}\i nc{\i} d\"ord\"ulle\c{s}ti\-ril\-m%
+i\c{s} \i rakg\"or\"ur dizeyi oldu\u{g}unu vurgulamaktad\i r. \.I%
+kinci d\"ord\"ulle\c{s}tirilmi\c{s} \i rakg\"or\"ur dizeyi, birin%
+cisi bi\c{c}iminden %
+%------------------------------(24)-----------------------------------%
+\begin{equation}
+ \left(\mathbf{F},\mathbf{a}\right)^{d2} = 
+ \lfloor \mathbf{F} , \left(\mathbf{F},
+ \mathbf{a}\right)^{d1}\mathbf{a} \rceil
+ + \lfloor \mathbf{F} , 
+ \mathbf{a} \rceil \left(\mathbf{F},\mathbf{a}\right)^{d1}
+\end{equation}
+%------------------------------(24)-----------------------------------%
+olarak yaz\i labilir. Elbette %
+$\left(\mathbf{F},\mathbf{a}\right)^{dj}$ dizeyleri aras\i ndaki %
+olas{\i} ili\c{s}kilendirimler e\c{s}siz de\u{g}ildir. Burada \"o%
+nerilen, olas{\i} ili\c{s}kilendirim bi\c{c}imlerinden yaln{\i}zc%
+a biridir. $\left(\mathbf{F},\mathbf{a}\right)^{d3}$ i\-\c{c}in i%
+se gerek $\left(\mathbf{F},\mathbf{a}\right)^{d2}$ ve gerek %
+$\left(\mathbf{F},\mathbf{a}\right)^{d1}$ dizeylerini i\c{c}inde %
+bar\i nd\i ran %
+%------------------------------(25)-----------------------------------%
+\begin{equation}
+ \left(\mathbf{F},\mathbf{a}\right)^{d3} =
+ \lfloor \mathbf{F} , \mathbf{a} \rceil 
+ \left(\mathbf{F},\mathbf{a}\right)^{d2}
+ + 2 \lfloor \mathbf{F} , \left(\mathbf{F},%
+ \mathbf{a}\right)^{d1}\mathbf{a} \rceil
+ \left(\mathbf{F},\mathbf{a}\right)^{d1}
+ + \lfloor \mathbf{F} , \left(\mathbf{F},%
+ \mathbf{a}\right)^{d2}\mathbf{a} \rceil
+\end{equation}
+%------------------------------(25)-----------------------------------%
+ili\c{s}kilendirimi ortaya konulabilir. Bir sonraki dizey ise %
+%------------------------------(26)-----------------------------------%
+\begin{equation}
+ \left(\mathbf{F},\mathbf{a}\right)^{d4} = 
+ \lfloor \mathbf{F} , \mathbf{a} \rceil 
+ \left(\mathbf{F},\mathbf{a}\right)^{d3}
+ + 3 \lfloor \mathbf{F} , \left(\mathbf{F},%
+ \mathbf{a}\right)^{d2}\mathbf{a} \rceil
+ \lfloor \mathbf{F} , \mathbf{a} \rceil 
+ + 3 \lfloor \mathbf{F} , \lfloor \mathbf{F} , 
+ \mathbf{a} \rceil \mathbf{a} \rceil
+ \left(\mathbf{F},\mathbf{a}\right)^{d2}
+ + \lfloor \mathbf{F} , \left(\mathbf{F},%
+ \mathbf{a}\right)^{d3}\mathbf{a} \rceil
+\end{equation}
+%------------------------------(26)-----------------------------------%
+yap\i s\i ndad\i r. Bu bi\c{c}imde ilerlenebilir. Bir sonraki diz%
+ey ise %
+%------------------------------(27)-----------------------------------%
+\begin{eqnarray}
+ \left(\mathbf{F},\mathbf{a}\right)^{d5} &=&
+ \lfloor \mathbf{F} , \mathbf{a} \rceil 
+ \left(\mathbf{F},\mathbf{a}\right)^{d4}
+ + 4 \lfloor \mathbf{F} , \left(\mathbf{F},%
+ \mathbf{a}\right)^{d3}\mathbf{a} \rceil
+ \lfloor \mathbf{F} , \mathbf{a} \rceil
+ + 6 \lfloor \mathbf{F} , \left(\mathbf{F},%
+ \mathbf{a}\right)^{d2}\mathbf{a} \rceil
+ \left(\mathbf{F},\mathbf{a}\right)^{d2} \nonumber\\
+ &+& 4  \lfloor \mathbf{F} ,  \lfloor \mathbf{F} , 
+ \mathbf{a} \rceil  
+ \mathbf{a} \rceil \left(\mathbf{F},\mathbf{a}\right)^{d3}
+ +  \lfloor \mathbf{F} , %
+ \left(\mathbf{F},\mathbf{a}\right)^{d4}\mathbf{a} \rceil
+\end{eqnarray}
+%------------------------------(27)-----------------------------------%
+yap\i s\i nda g\"undeme gelir. Bir sonraki di\-zeyin yap{\i}s{\i}%
+n{\i}n g\"ozle ve ka\u{g}\i t kalemle be\-lirleni\c{s}i, terim sa%
+y\i s\i n\i n \c{c}oklu\u{g}undan dolay{\i} zor\-dur. Ya\-p\i lma%
+s{\i} gereken, buraya kadar elde edilen ve do\u{g}rulu\u{g}u g\"o%
+zle denetlenebilen yap\i n\i n nas\i l bir \"or\"unt\"u or\-taya %
+\c{c}\i kard\i \u{g}\i n{\i} g\"undeme getirmektir. Bu \"o\-r\"un%
+t\"u kullan\i larak di\u{g}er dizeyler de elde edilebilir. Katsay%
+\i lar olarak, ikiterimli a\c{c}\i l\i m{\i} kat\-say\i lar{\i} g%
+\"undemdedir. Terimler ise, daha k\"u\c{c}\"uk s\i rasay\i l{\i} %
+$\left(\mathbf{F},\mathbf{a}\right)^{dj}$ dizey\-leri\-ne ol\-duk%
+\c{c}a somut kurallarla ba\u{g}l\i d\i r. Son\-ra\-ki iki dizey i%
+\c{c}in, \"or\"unt\"u temel al\i narak, \"o\-ne\-rilen yap\i lar %
+a\c{s}a\u{g}\i daki gibidir. %
+%------------------------------(28)-----------------------------------%
+\begin{eqnarray}
+ \left(\mathbf{F},\mathbf{a}\right)^{d6} &=&
+ \lfloor \mathbf{F} , \mathbf{a} \rceil
+ \left(\mathbf{F},\mathbf{a}\right)^{d5}
+ + 5 \lfloor \mathbf{F} , \left(\mathbf{F},%
+\mathbf{a}\right)^{d4}\mathbf{a} \rceil
+ \lfloor \mathbf{F} , \mathbf{a} \rceil 
+ + 5 \lfloor \mathbf{F} , \lfloor \mathbf{F} , 
+ \mathbf{a} \rceil \mathbf{a} \rceil
+ \left(\mathbf{F},\mathbf{a}\right)^{d4}
+ + 10  \lfloor \mathbf{F} ,  \lfloor \mathbf{F} , 
+ \lfloor \mathbf{F} 
+ , \mathbf{a} \rceil \mathbf{a} \rceil \mathbf{a} \rceil 
+ \left(\mathbf{F},\mathbf{a}\right)^{d3} \nonumber\\
+ &+& 10  \lfloor \mathbf{F} ,  \lfloor \mathbf{F} , 
+ \left(\mathbf{F},\mathbf{a}\right)^{d3}\mathbf{a} 
+ \rceil\mathbf{a} \rceil 
+ \lfloor \mathbf{F} , \mathbf{a} \rceil
+ +  \lfloor \mathbf{F} ,  
+ \left(\mathbf{F},\mathbf{a}\right)^{d5}\mathbf{a} \rceil
+\label{eq:dd6}
+\end{eqnarray}
+%------------------------------(28)-----------------------------------%
+%------------------------------(29)-----------------------------------%
+\begin{eqnarray}
+ \left(\mathbf{F},\mathbf{a}\right)^{d7} &=&
+ \lfloor \mathbf{F} , \mathbf{a} \rceil
+ \left(\mathbf{F},\mathbf{a}\right)^{d6}
+ + 6 \lfloor \mathbf{F} , 
+ \left(\mathbf{F},\mathbf{a}\right)^{d5}\mathbf{a} \rceil
+ \lfloor \mathbf{F} , \mathbf{a} \rceil 
+ + 6 \lfloor \mathbf{F} , 
+ \lfloor \mathbf{F} , \mathbf{a} \rceil \mathbf{a} \rceil
+ \left(\mathbf{F},\mathbf{a}\right)^{d5}
+ + 15  \lfloor \mathbf{F} ,  
+ \lfloor \mathbf{F} , \lfloor \mathbf{F} 
+ , \mathbf{a} \rceil \mathbf{a} \rceil \mathbf{a} \rceil 
+ \left(\mathbf{F},\mathbf{a}\right)^{d4} \nonumber\\
+ &+& 15  \lfloor \mathbf{F} ,  
+ \lfloor \mathbf{F} , 
+ \left(\mathbf{F},\mathbf{a}\right)^{d4}\mathbf{a} 
+ \rceil\mathbf{a} \rceil 
+ \lfloor \mathbf{F} , \mathbf{a} \rceil
+ + 20 \lfloor \mathbf{F} , 
+ \left(\mathbf{F},\mathbf{a}\right)^{d3}\mathbf{a} \rceil
+ \left(\mathbf{F},\mathbf{a}\right)^{d3}
+ +  \lfloor \mathbf{F} , 
+ \left(\mathbf{F},\mathbf{a}\right)^{d6}\mathbf{a} \rceil \, .
+ \label{eq:dd7}
+\end{eqnarray}
+%------------------------------(29)-----------------------------------%
+(\ref{eq:dd6}) ve (\ref{eq:dd7}) ba\u{g}\i nt\i lar{\i} ile ilgil%
+i do\u{g}rulay\i \c{s} \c{c}al\i \c{s}mas{\i} yap\i lacakt\i r. A%
+ma kolay s\i nay\i \c{s}lar hemen yap\i labilir. \"Or\-ne\u{g}in %
+$\left(\mathbf{F},\mathbf{a}\right)^{d6}$ dizeyinin %
+%------------------------------(30)-----------------------------------%
+\begin{equation}
+10  \lfloor \mathbf{F} ,  \lfloor \mathbf{F} , \lfloor \mathbf{F} 
+ , \mathbf{a} \rceil \mathbf{a} \rceil \mathbf{a} \rceil 
+ \left(\mathbf{F},\mathbf{a}\right)^{d3}                                                                     
+\end{equation}
+%------------------------------(30)-----------------------------------%
+terimini inceleme alt\i na alal\i m. Bu terimin yapt\i \u{g}{\i} %
+i\c{s}lem, \"u\c{c}\"unc\"u d\"ord\"ulle\c{s}tirilmi\c{s} \i rakg%
+\"or\"ur dizeyini soldan \"u\c{c}l\"u d\"ord\"ulle\c{s}tirim ile %
+\c{c}arpmakt\i r. Bu ba\u{g}lamda %
+%------------------------------(31)-----------------------------------%
+\begin{equation}
+  1\quad 2\quad 3 \rightarrow 1\quad 1\quad 1\quad 4\quad 5\quad 6
+\end{equation}
+%------------------------------(31)-----------------------------------%
+olmaktad\i r. Soldan \"u\c{c}l\"u d\"ord\"ulle\c{s}\-ti\-rim ile %
+\c{c}arp\i m i\c{s}lemi bu bi\c{c}imde tan\i mland\i \u{g}\i na g%
+\"ore katsay{\i} da tutarl{\i} olmal\i d\i r. \"O\-zel kabarc\i k%
+l{\i} s\i rabozu\c{s} ile bu dizilimin e\c{s}de\u{g}erlilik k\"um%
+esinde 10 adet dizilim oldu\u{g}u g\"osterilebilir. Bu di\-ziliml%
+er %
+%------------------------------(32)-----------------------------------%
+\begin{eqnarray}
+ S_{1,1,1,4,5,6} &=& \left\{[1,1,1,4,5,6],[1,1,3,1,5,6],%
+[1,2,1,1,5,6],[1,1,3,4,1,6],[1,1,3,4,5,1],%
+[1,2,1,4,1,6],\right.\nonumber\\
+ &&\left.[1,2,1,4,5,1],[1,2,3,1,1,6],%
+[1,2,3,1,5,1],[1,2,3,4,1,1]\right\}
+\end{eqnarray}
+%------------------------------(32)-----------------------------------%
+dizilimleridir. Dolay\i s\i yla, bu kat\-k{\i} i\-\c{c}in tu\-tar%
+l{\i}l\i k s\"oz konusudur. %
+
+E\u{g}er 
+%------------------------------(33)-----------------------------------%
+\begin{equation}
+ \left(\mathbf{F},\mathbf{a}\right)^{d0} = \mathbf{I}
+\end{equation}
+%------------------------------(33)-----------------------------------%
+oldu\u{g}u g\"oz \"on\"unde bulundurulursa, 
+%------------------------------(34)-----------------------------------%
+\begin{equation}
+ \left(\mathbf{F},\mathbf{a}\right)^{dj} = \sum_{k=0}^{j-1} 
+ {j-1 \choose k}  \lfloor \mathbf{F} , 
+ \left(\mathbf{F},\mathbf{a}\right)^{dk}\mathbf{a} \rceil
+ \left(\mathbf{F},\mathbf{a}\right)^{d(j-1-k)} \, ,  
+\quad j=1,2,\ldots
+\label{eq:yoo}
+\end{equation}
+%------------------------------(34)-----------------------------------%
+oldu\u{g}u g\"or\"ulebilir. (\ref{eq:yoo}) ba\u{g}\i nt\i s{\i},
+bir dizeycil \"ozyineleyi\c{s}tir.
+Bu \"ozyineleyi\c{s} do\u{g}rusal
+de\u{g}ildir ve yerel de\u{g}ildir. 
+
+\section{Bilimsel yaz\i n}
+
+Olas\i l\i ksal evrim kuram{\i} (OEK) ile ilgili \c{c}al\i \c{s}m%
+alar\i n say{\i}s{\i} artmaktad\i r. \"Ozellikle, nicem dizgeleri%
+n beklenen de\u{g}er devinimi ba\u{g}lam\i nda \c{c}\"oz\"um\"u %
+\"uzerine g\"uncel \c{c}al\i \c{s}malar bulunmaktad\i r. %
+
+Burada, yaln\i zca bu \c{c}al\i \c{s}ma ile birincil d\"uzeyde il%
+gili kaynaklara k\i saca de\u{g}inilecektir. \.Ilgile\-nen okuyuc%
+u, yaz\i larda kullan\i lan kaynaklar{\i} inceleyebilir ya da ara%
+ma ara\c{c}lar{\i} kullanarak, belirli alanlarda derinle\c{s}me y%
+oluna gidebilir. %
+
+Sa\u{g} yan{\i} ikinci derece \c{c}ok\c{c}okterimli olan belir\-t%
+ik s\i radan t\"urevli denklem tak\i mlar{\i}n\i n \c{c}\"o\-z\"u%
+m\"u ile ilgili bilgi edinmek i\c{c}in Co\c{s}ar G\"o\-z\"uk\i rm%
+{\i}z{\i} ve Metin Demiralp'in \textit{Journal of Mathematical Ch%
+emistry}'de yay\i nlanan yaz\i lar{\i} incelenmelidir %
+\cite{p1,p2}. D\"ord\"ul%
+le\c{s}\-ti\-rim ile ilgili ise bildiri d\"uzeyinde \"onemli kayn%
+aklar eri\c{s}ilebilir durum\-da\-d\i r \cite{MD2014Dec}. %
+K\i sa bir s\"ure i\c{c}%
+inde bas\i lacak olanlar{\i} da vard\i r \cite{cg2015, mek2015}. %
+D\"ord\"ulle\c{s}tirim %
+ba\u{g}lam\i nda g\"undeme gelen katsay\i lar\i n o\-lu\c{s}turdu%
+\u{g}u dizilim, Co\c{s}ar G\"oz\"uk\i rm\i z{\i} ta\-ra\-f\i n\-d%
+an \textit{Online Encyclopedia of Integer Sequences}'a 
+ek\-len\-mi\c{s}tir \cite{encent, enc}. %
+Co\c{s}ar G\"oz\"uk\i rm\i z{\i} ta\-raf\i n\-dan o\-l%
+u\c{s}turulan, sa\u{g} yan{\i} ikinci derece \c{c}ok\c{c}okteriml%
+i olan belirtik s\i ra\-dan t\"urevli denklem tak\i mlar\i n\i n % 
+ba\c{s}lang\i \c{c} de\-\u{g}er so\-rununu yakla\c{s}\i k olarak %
+\c{c}\"ozen betik ise \textit{GitHub}'da eri\c{s}ilebilir durumda%
+d\i r \cite{code}. %
+
+\"On\"um\"uzdeki y\i llarda OEK ve \c{c}ev\-re\-sindeki konular b%
+a\u{g}lam\i nda yap\i lan \c{c}al\i \c{s}malar\i n artmas{\i}; ya%
+z{\i} ve bilimsel toplant\i lar ba\u{g}lam\i nda olu\c{s}an 
+etkile\c{s}imle%
+r ile kuram\i n kullan\i m\i n\i n yayg\i nla\c{s}mas{\i} beklenm%
+ektedir. %
+
+\bibliographystyle{unsrturl}  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% You probably want to use your own bibtex database here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliography{anlatim}
+
+\end{document}

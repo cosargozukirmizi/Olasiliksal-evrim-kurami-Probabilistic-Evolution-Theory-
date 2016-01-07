@@ -1,0 +1,59 @@
+\begin{thebibliography}{1}
+
+\bibitem{p1}
+Co\c{s}ar G\"oz\"uk{\i}rm{\i}z{\i} and Metin Demiralp.
+\newblock Probabilistic evolution approach for the solution of explicit
+  autonomous ordinary differential equations. part 1: Arbitrariness and
+  equipartition theorem in kronecker power series.
+\newblock {\em Journal of Mathematical Chemistry}, 52(3):866--880, 2014.
+\newblock \href {http://dx.doi.org/10.1007/s10910-013-0298-5}
+  {\path{doi:10.1007/s10910-013-0298-5}}.
+
+\bibitem{p2}
+Co\c{s}ar G\"oz\"uk{\i}rm{\i}z{\i} and Metin Demiralp.
+\newblock Probabilistic evolution approach for the solution of explicit
+  autonomous ordinary differential equations. part 2: Kernel separability,
+  space extension, and, series solution via telescopic matrices.
+\newblock {\em Journal of Mathematical Chemistry}, 52(3):881--898, 2014.
+\newblock \href {http://dx.doi.org/10.1007/s10910-013-0299-4}
+  {\path{doi:10.1007/s10910-013-0299-4}}.
+
+\bibitem{MD2014Dec}
+Metin Demiralp.
+\newblock Squarificating the telescope matrix images of initial value vector in
+  probabilistic evolution theory (pet).
+\newblock In {\em Proceedings of the 19th International Conference on Applied
+  Mathematics (AMATH'14)}, ISBN: 978-1-61804-258-3, pages 99--104,
+  \.{I}stanbul, T\"urkiye, December 2014. WSEAS Press.
+
+\bibitem{cg2015}
+Co\c{s}ar G\"oz\"uk{\i}rm{\i}z{\i} and Metin Demiralp.
+\newblock Probabilistic evolution theory for ode sets with second degree
+  multinomial right hand side functions: Implementation.
+\newblock In {\em Proceedings of 11th International Conference of Computational
+  Methods in Sciences and Engineering}, 2015.
+
+\bibitem{mek2015}
+Melike~Ebru K{\i}rk{\i}n and Co\c{s}ar G\"oz\"uk{\i}rm{\i}z{\i}.
+\newblock Probabilistic evolution theory for ode sets with second degree
+  multinomial right hand side functions: Certain reductive cases.
+\newblock In {\em Proceedings of 11th International Conference of Computational
+  Methods in Sciences and Engineering}, 2015.
+
+\bibitem{encent}
+Co\c{s}ar G\"oz\"uk{\i}rm{\i}z{\i}.
+\newblock Sequence {A}262180 in [7], 2015.
+
+\bibitem{enc}
+The OEIS~Foundation Inc.
+\newblock The online encyclopedia of integer sequences.
+\newblock \url{http://oeis.org}, 2012.
+
+\bibitem{code}
+Co\c{s}ar G\"oz\"uk{\i}rm{\i}z{\i}.
+\newblock Olas\i l\i ksal evrim kuram{\i} (probabilistic evolution theory).
+\newblock
+  \url{https://github.com/cosargozukirmizi/Olasiliksal-evrim-kurami-Probabilistic-Evolution-Theory-},
+  2015.
+
+\end{thebibliography}
