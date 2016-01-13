@@ -7,7 +7,7 @@
 `Squtelmat::S` calculates the value of the squarified telescope matrix using
 the nonlocal recursion between the squarified telescope matrices.
 _i_ is the subindex of the squarified telescope matrix under consideration. _a_ is an
-_n_-element vector and _F_ is a _n_x_n_^2 matrix. _F_ and _a_ undergo squarifications.
+n-element vector and _F_ is a nxn^2 matrix. _F_ and _a_ undergo squarifications.
 This procedure returns the squarified telescope matrix.
 
 The procedure uses the _remember_ option for fast calculation.  

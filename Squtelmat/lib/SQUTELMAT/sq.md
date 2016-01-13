@@ -4,7 +4,7 @@
 
 ## DESCRIPTION
 
-`Squtelmat::sq` evaluates a single squarification using _n_x_n_^2 matrix _F_ 
+`Squtelmat::sq` evaluates a single squarification using nxn^2 matrix _F_ 
 and an n-element vector _a_.  
  
 ## EXAMPLES
