@@ -6,10 +6,10 @@
 /* simge katarini dondurur.	     */
 /* ********************************* */
 
-Squtelmat::tree2nestedCalls := proc(str)
-local pos; 
+Squtelmat::tree2nestedCalls := proc(t2nci)
+local pos; local str;
 begin
- str:=expr2text(expr(str)):
+ str:=expr2text(expr(t2nci)):
  str:=stringlib::subs(str, "NIL" = "F"):  
  pos:=strmatch(str, "\\[\\]*$", Index):
  pos:=pos[1]:

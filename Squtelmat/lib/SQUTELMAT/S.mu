@@ -3,7 +3,7 @@
 /* rakgorur dizeyini uretir.         */
 /* Dordullestirilmis irakgorur di-   */
 /* zeyleri arasindaki ozyineli ilis- */
-/* liskiyi kullanir.	 	     */
+/* kiyi kullanir.	 	     */
 /* ********************************* */
 
 Squtelmat::S := proc(S_i : Type::NonNegInt, S_a, S_F)

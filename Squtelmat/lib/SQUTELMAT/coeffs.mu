@@ -13,6 +13,7 @@ Squtelmat::coeffs:=proc(n)
 local sirali_yapi;
 local i; local orn; local orn_sirali;
 local coeffs_ret;  local siralanmamis;
+save BelowDiagonalTraversal;
 begin
 if(fopen("tmp/coeffs".expr2text(n)) = FAIL ) then
 	sirali_yapi:=[0$n!]:

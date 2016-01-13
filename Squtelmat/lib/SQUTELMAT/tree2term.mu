@@ -7,10 +7,10 @@
 /* gosteren bir simge katari uretir. */
 /* ********************************* */
 
-Squtelmat::tree2term := proc(str)
-local pos; 
+Squtelmat::tree2term := proc(t2ti)
+local pos; local str;
 begin
- str:=expr2text(expr(str)):
+ str:=expr2text(expr(t2ti)):
  str:=stringlib::subs(str, "NIL" = "F"):  
  pos:=strmatch(str, "\\[\\]*$", Index):
  pos:=pos[1]:
