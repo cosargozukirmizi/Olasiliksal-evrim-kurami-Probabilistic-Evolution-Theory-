@@ -31,7 +31,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* katsayilarin belirlenimi icin i-  */
 /* kili agac yapilari ile ilgili ba- */
 /* zi olgular kullanilmistir.        */
-/* Son guncelleyim: 1 Ocak 2016      */
+/* Son guncelleyim: 14 Ocak 2016     */
 /* ********************************* */
 
 package("Squtelmat"):
@@ -72,6 +72,8 @@ R := ()-> Mat([r1(args()),r2(args())]):
 /* ********************************* */
 
 uygula := proc(u_gy, u_f)
+local u_retvec; save Mat;
+local u_i;
 begin
  u_retvec:=Mat(nops(u_gy),1):
   for u_i from 1 to nops(u_gy) do
@@ -86,6 +88,10 @@ end_proc:
 /* ********************************* */
 
 kroneckerPowerOp := proc(krpo_u,krpo_j)
+save Mat; local krpo_it1;
+local krpo_ret_vec; local krpo_ret_vec2;
+local krpo_it2; local krpo_it3;
+local krpo_ind;
 begin
  if krpo_j = 0 then 
   print("kroneckerPowerOp not defined for 0"):
@@ -118,6 +124,8 @@ end_proc:
 /* ********************************* */
 
 kroneckerPower := proc(krp_u,krp_j)
+save Mat; local krp_retvec;
+local krp_i;
 begin
  if krp_j < 0 then
   return(Mat([0])):
@@ -138,6 +146,9 @@ end_proc:
 /* ********************************* */
 
 F_bul := proc(rx, F_bul_it1)
+local tmp_F_bul;
+save D1, D2, GradYoneyi, kroneckerPowerOp; 
+save x1, x2, uygula;
 begin
  if F_bul_it1 = 0 then
   return(evalAt(rx, (x1=0,x2=0))):
@@ -208,9 +219,10 @@ cozum:=Pet::sdmode(F_asil(0), F_asil(1), F_asil(2), bas_yoney, 7):
 /* ********************************* */
 
 for it_i from 0 to 1 step 0.1 do 
- print(NoNL,expr2text(it_i)."\t".expr2text(evalAt(cozum[1,1]
-  ,[t=it_i]))."\t".expr2text(
-  evalAt(cozum[2,1],[t=it_i]))."\n"):  
+ print(NoNL
+ ,expr2text(it_i)."\t".expr2text(evalAt(cozum[1,1]
+ ,[t=it_i]))."\t".expr2text(
+ evalAt(cozum[2,1],[t=it_i]))."\n"):  
 end_for:
 
 
