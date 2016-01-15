@@ -24,14 +24,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* yenli dizgenin olasiliksal evrim  */
 /* yaklasimi ve degismezlik eklenim- */ 
 /* li uzay genisletimi ile cozumu i- */ 
-/* cin atilan adimlari icermektedir. */
-/* Dordulestirim olgusu baglaminda   */
-/* dogrusal birlestirimler ile dizey */
-/* katsayilar belirlenmistir. Dizey  */
-/* katsayilarin belirlenimi icin i-  */
-/* kili agac yapilari ile ilgili ba- */
-/* zi olgular kullanilmistir.        */
-/* Son guncelleyim: 14 Ocak 2016     */
+/* cindir. 			     */
+/* Son guncelleyim: 15 Ocak 2016     */
 /* ********************************* */
 
 package("Squtelmat"):
