@@ -2,7 +2,8 @@
 \renewcommand{\refname}{Kaynaklar}
 \usepackage[utf8]{inputenc}
 \usepackage[a4paper, total={6.5in, 10.0in}]{geometry}
-\usepackage[FIGTOPCAP]{subfigure}
+%\usepackage[FIGTOPCAP]{subfigure}
+\usepackage{subfigure}
 \usepackage{tikz-qtree}
 \usetikzlibrary{graphdrawing, graphs}
 \usepackage{tikz}
@@ -10,14 +11,15 @@
 \usegdlibrary{trees, layered}
 \usepackage{hyperref}
 \usepackage{doi}
+\usepackage{difftrees}
 
 %opening
 \title{D\"ord\"ulle\c{s}tirilmi\c{s} \i rakg\"or\"ur dizeylerinin 
 belirlenimi}
 \author{Co\c{s}ar G\"oz\"uk\i rm\i z{\i}}
-\date{30 Aral\i k 2015}
+\date{13 Mart 2016}
 \linespread{1.5}
-\renewcommand{\figurename}{\c{C}izim}
+\renewcommand{\tablename}{\c{C}izelge}
 \begin{document}
 \maketitle
 
@@ -441,10 +443,8 @@ a \c{c}izim 1,2 ve 3'te verilmi\c{s}\-tir. $\mathbf{S}_{1}$'e kar%
 \c{s}\i l\i k gelen a\u{g}a\c{c} i\-se, bir d\"u\u{g}\"um\-l\"u a%
 \u{g}a\c{c}t\i r. %
 
-\begin{figure}
+\begin{table}
 \centering
-\caption{$\mathbf{S}_{2}$ ba\u{g}lam\i nda g\"undeme gelen 
-ikili a\u{g}a\c{c} yap\i lar{\i}}
 \begin{tabular}{|c|c|}
 \hline
  (a) 12 & (b) 11 \\
@@ -461,8 +461,10 @@ a -- {{b} ,{}}
 &\\
 \hline
 \end{tabular}
-\end{figure}
-%\begin{figure}
+\caption{$\mathbf{S}_{2}$ ba\u{g}lam\i nda g\"undeme gelen 
+ikili a\u{g}a\c{c} yap\i lar{\i}}
+\end{table}
+%\begin{table}
 %\centering
 %\caption{$\mathbf{S}_{2}$ ba\u{g}lam\i nda g\"undeme gelen 
 %ikili a\u{g}a\c{c} yap\i lar{\i}}
@@ -481,11 +483,9 @@ a -- {{b} ,{}}
 %a -- {{b} ,{}}
 %};
 %}
-%\end{figure}
-\begin{figure}
+%\end{table}
+\begin{table}
 \centering
-\caption{$\mathbf{S}_{3}$ ba\u{g}lam\i nda g\"undeme gelen ikili 
-a\u{g}a\c{c} yap\i lar{\i}}
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
 (a) 123 & (b) 122 & (c) 121 & (\c{c}) 113 & (d) 112 & (e) 111 \\
@@ -517,8 +517,10 @@ a -- e -- f
 &&&&&\\
 \hline
 \end{tabular}
-\end{figure}
-%\begin{figure}
+\caption{$\mathbf{S}_{3}$ ba\u{g}lam\i nda g\"undeme gelen ikili 
+a\u{g}a\c{c} yap\i lar{\i}}
+\end{table}
+%\begin{table}
 %\centering
 %\caption{$\mathbf{S}_{3}$ ba\u{g}lam\i nda g\"undeme gelen ikili 
 %a\u{g}a\c{c} yap\i lar{\i}}
@@ -564,12 +566,10 @@ a -- e -- f
 % a -- e -- f
 % };
 % }
-% \end{figure}
+% \end{table}
 
-\begin{figure}
+\begin{table}
 \centering
-\caption{$\mathbf{S}_{4}$ ba\u{g}lam\i nda g\"undeme gelen ikili 
-a\u{g}a\c{c} yap\i lar{\i}}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
 (a) 1234 & (b) 1233 & (c) 1232 & (\c{c}) 1231 & (d) 1224 & (e) 1223 & (f) 1222 & (g) 1221 \\
@@ -702,9 +702,11 @@ sibling distance=5mm, level distance=5mm]
 &&&&&&&\\
 \hline
 \end{tabular}
-\end{figure}
+\caption{$\mathbf{S}_{4}$ ba\u{g}lam\i nda g\"undeme gelen ikili 
+a\u{g}a\c{c} yap\i lar{\i}}
+\end{table}
 
-% \begin{figure}
+% \begin{table}
 % \centering
 % \caption{$\mathbf{S}_{4}$ ba\u{g}lam\i nda g\"undeme gelen ikili 
 % a\u{g}a\c{c} yap\i lar{\i}}
@@ -835,9 +837,9 @@ sibling distance=5mm, level distance=5mm]
 % {e -- {  b -- c, g}} 
 % };
 % }
-% %\end{figure}
+% %\end{table}
 % 
-% %\begin{figure}
+% %\begin{table}
 % %\centering
 % %\caption{$\mathbf{S}_{4}$ devam{\i}}
 % \subfigure[1124]{
@@ -903,7 +905,7 @@ sibling distance=5mm, level distance=5mm]
 % {a -- { b -- c -- {d}}} 
 % };
 % }
-% \end{figure}
+% \end{table}
 
 A\u{g}a\c{c}tan dizey cebircil yap\i ya ge\-\c{c}i\c{s} i\-\c{c}i%
 n s\i ral{\i} gezini\c{s} kullan\i labilir. S\i ral{\i} ge\-zi\-n%
@@ -1173,29 +1175,375 @@ er %
 dizilimleridir. Dolay\i s\i yla, bu kat\-k{\i} i\-\c{c}in tu\-tar%
 l{\i}l\i k s\"oz konusudur. %
 
-E\u{g}er 
+Asl\i nda,  
 %------------------------------(32)-----------------------------------%
-\begin{equation}
- \mathbf{S}_{0} = \mathbf{I}
-\end{equation}
-%------------------------------(32)-----------------------------------%
-oldu\u{g}u g\"oz \"on\"unde bulundurulursa, 
-%------------------------------(33)-----------------------------------%
 \begin{equation}
  \mathbf{S}_{j} = \sum_{k=0}^{j-1} 
  {j-1 \choose k}  \lfloor \mathbf{F} , 
  \mathbf{S}_{k}\mathbf{a} \rceil
- \mathbf{S}_{(j-1-k)} \, ,  
+ \mathbf{S}_{(j-1-k)} \, ,  \,\;  \mathbf{S}_{0} = \mathbf{I}\, , 
 \quad j=1,2,\ldots
 \label{eq:yoo}
 \end{equation}
-%------------------------------(33)-----------------------------------%
-oldu\u{g}u g\"or\"ulebilir. (\ref{eq:yoo}) ba\u{g}\i nt\i s{\i},
-bir dizeycil \"ozyineleyi\c{s}tir.
-Bu \"ozyineleyi\c{s} do\u{g}rusal
-de\u{g}ildir ve yerel de\u{g}ildir. 
+%------------------------------(32)-----------------------------------%
+oldu\u{g}u g\"or\"ulebilir. (\ref{eq:yoo}) ba\u{g}\i nt\i s{\i}, %
+bir dizeycil \"ozyineleyi\c{s}tir. Bu \"ozyineleyi\c{s} do\u{g}ru%
+sal de\u{g}ildir ve yerel de\u{g}ildir. %
 
-\section{Bilimsel yaz\i n}
+\section{K\"okl\"u a\u{g}a\c{c} yakla\c{s}\i m{\i}}
+
+Bilimsel yaz\i nda, t\"urev i\c{s}le\c{c}lerini betimlemek i\c{c}%
+in k\"okl\"u a\u{g}a\c{c}lar s\i kl\i kla kul\-lan\i l\i r 
+\cite{Munthe-Kaas2013}. K\"ok%
+l\"u a\u{g}a\c{c}lara, John C. Butcher'\i n ad\i n{\i} an\i msata%
+cak bi\c{c}imde B-a\u{g}a\c{c}lar{\i} da denmektedir. K\"okl\"u a%
+\u{g}a\c{c}lar\i n, ikili a\u{g}a\c{c} kullan\i m\i na g\"ore ne %
+gibi bir getiri sa\u{g}lad\i \u{g}{\i} pek a\c{c}\i k de\u{g}ildi%
+r. Asl\i nda, k\"okl\"u a\u{g}a\c{c}lar ve ikili a\u{g}a\c{c}lar %
+birbirlerine d\"on\"u\c{s}t\"ur\"ulebilir. %
+
+D\"ord\"ulle\c{s}tirilmi\c{s} \i rakg\"or\"ur dizeyleri ba\u{g}la%
+m\i nda d\"u\c{s}\"unerek, ilk birka\c{c} $\mathbf{S}$ i\c{c}in i%
+lgili ikili ve k\"okl\"u a\u{g}a\c{c}lar \c{c}izelge 4, 5, 6 ve %
+7'de belirtilmi\c{s}tir. %
+
+Bilimsel yaz\i nda ayn{\i} \"ozellikleri g\"osteren cebirlere \"o%
+zyineleme olu\c{s}turmak i\c{c}in izlenen yol a\c{s}\i lama %
+(ing: grafting) kullanan yap\i lard\i r. A\c{s}\i lama, kat{\i}%
+\c{s}\i msal (ing: combinatorial) bir olgudur. Bir a\u{g}ac{\i}, %
+ba\c{s}ka bir a\u{g}ac\i n b\"ut\"un d\"u\u{g}\"umlerinde araya s%
+okarak olu\c{s}an b\"ut\"un a\u{g}a\c{c}lar{\i} toplamak anlam%
+{\i}na gelir. Dolay\i s\i yla, a\c{s}\i lama, burada \"ong\"or\"u%
+len \"ozyineleme ile yine burada \"ong\"or\"ulen \"ozel kabarc%
+\i kl{\i} yap{\i} aras\i nda bir y\"ontemdir. \c{C}\"unk\"u, hem %
+kat\i \c{s}\i msal, hem de \"ozyineleyimcil yap{\i}dad\i r. %
+
+(\ref{eq:yoo}) \"ozyineleyi\c{s}i, k\"okl\"u a\u{g}a\c{c}lar bi%
+\c{c}iminden de g\"undeme getirilebilir. Bunun i\c{c}in \"oncelik%
+le Butcher \c{c}arp{\i}\-m\i n\-dan s\"oz etmek gerekir. Butcher %
+\c{c}arp\i m{\i}, iki k\"okl\"u a\u{g}a\c{c} aras\i nda tan\i mla%
+nan bir i\c{s}lemdir. Yap\i lan i\c{s}lem ise ilk a\u{g}ac{\i}, i%
+kincinin k\"ok\"une soldan ba\u{g}lamakt\i r. Bu i\c{s}lem, a%
+\c{s}a\u{g}\i da \"orneklendirilmi\c{s}tir. %
+%------------------------------(33)-----------------------------------%
+\begin{equation}
+ \AabB \star \aaababbb = \, \aAabBaababbb \ \ =\  
+ (\ab\star\AB)\star((\ab\star(\ab\star\ab))\star\ab) 
+\end{equation}
+%------------------------------(33)-----------------------------------%
+D\"u\u{g}\"um\"un beyaz olarak g\"osterimi, anla\c{s}\i l\i rl%
+\i k sa\u{g}lamak i\c{c}indir. Birinci a\u{g}a\c{c} ikincinin k%
+\"ok\"un\"un soluna ba\u{g}land\i \u{g}{\i} i\c{c}in bu i\c{s}lem%
+e sol Butcher \c{c}arp\i m{\i} da denebilir. %
+
+Benzer bi\c{c}imde sa\u{g} Butcher \c{c}arp\i m{\i} da tan\i mlan%
+abilir. Bilimsel yaz\i nda kar\c{s}\i la\c{s}mad\i \u{g}\i m, am%
+a tan\i mlanmas\i nda da herhangi bir sak\i nca olmayan bu i\c{s}%
+lemde, birinci a\u{g}a\c{c} ikincinin k\"ok\"une sa\u{g}dan ba%
+\u{g}lan\i r. Bu i\c{s}lem, sa\u{g} alt k\"o\c{s}esinde $r$ simge%
+si olan y\i ld\i zla g\"osterilecektir. A\c{s}a\u{g}\i da bu i%
+\c{s}leme bir \"ornek verilmi\c{s}tir.
+%------------------------------(34)-----------------------------------%
+\begin{equation}
+ \aabb \star_{r} \aababb = \aababaabbb
+\end{equation}
+%------------------------------(34)-----------------------------------%
+Butcher \c{c}arp\i m{\i}, toplam \"uzerinde da\u{g}\i labilir bi%
+r i\c{s}lem olarak g\"undeme getirilmelidir. Dolay\i s\i yla, %
+%------------------------------(35)-----------------------------------%
+\begin{equation}
+ \mathcal{S}_{2} \star_{r} \mathcal{S}_{1} = \Bigg( \aaabbb + 
+ \aababb \Bigg) \star_{r} \aabb
+ = \aaabbaabbb + \aababaabbb
+\end{equation}
+%------------------------------(35)-----------------------------------%
+s\"oz konusudur. %
+
+(\ref{eq:yoo}) \"ozyineleyi\c{s}i, sa\u{g} Butcher \c{c}arp\i m%
+{\i} kullan\i larak, %
+%------------------------------(36)-----------------------------------%
+\begin{equation}
+  \mathcal{S}_{j} = \sum_{k=0}^{j-1} 
+ {j-1 \choose k}   
+\left( \mathcal{S}_{k} \star_{r}
+ \mathcal{S}_{(j-1-k)} \right)\, ,  \,\;  
+ \mathcal{S}_{0} = \ab \, , 
+\quad j=1,2,\ldots
+\label{eq:yoo2}
+\end{equation}
+%------------------------------(36)-----------------------------------%
+yaz\i labilir. Bu \"ozyineleyi\c{s}, k\"okl\"u a\u{g}a\c{c} do%
+\u{g}rusal birle\c{s}tirimleri aras\i nda bir \"ozyineleyi\c{s}t%
+ir. Bu \"ozyineleyi%
+\c{s}, a\c{s}\i lama ba\u{g}lam\i nda g\"undeme gelen kat\i \c{s}%
+\i msal \"ozyineleyi\c{s}ten daha yal\i n yap\i dad\i r.
+
+\begin{table}
+\centering
+\begin{tabular}{|c|}
+\hline
+ (a) 1 \\
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+a 
+}; 
+\\
+\\
+\hline
+  \\
+\aabb\\
+\\
+\hline
+\end{tabular}
+\caption{$\mathbf{S}_{1}$ ba\u{g}lam\i nda g\"undeme gelen 
+ikili ve k\"okl\"u a\u{g}a\c{c} yap\i lar{\i}}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{|c|c|}
+\hline
+ (a) 12 & (b) 11 \\
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+a -- {{} ,{b}}
+}; &
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+a -- {{b} ,{}}
+}; \\
+&\\
+\hline
+&  \\
+\aaabbb & \aababb\\
+&\\
+\hline
+\end{tabular}
+\caption{$\mathbf{S}_{2}$ ba\u{g}lam\i nda g\"undeme gelen 
+ikili ve k\"okl\"u a\u{g}a\c{c} yap\i lar{\i}}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+(a) 123 & (b) 122 & (c) 121 & (\c{c}) 113 & (d) 112 & (e) 111 \\
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { , e -- { , f } } }};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { , e -- { f} } }};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { b , e  } }}; &
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { b , e  } }}; &
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { e --  {, f} } }};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+a -- e -- f
+};\\
+&&&&&\\
+\hline
+&&&&&\\
+\aaaabbbb & \aaababbb & \aabaabbb & \aabaabbb & \aaabbabb & \aabababb \\
+&&&&&\\
+\hline
+\end{tabular}
+\caption{$\mathbf{S}_{3}$ ba\u{g}lam\i nda g\"undeme gelen ikili 
+ve k\"okl\"u
+a\u{g}a\c{c} yap\i lar{\i}}
+\end{table}
+
+
+
+
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+(a) 1234 & (b) 1233 & (c) 1232 & (\c{c}) 1231 & (d) 1224 & (e) 1223 & (f) 1222 & (g) 1221 \\
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { , e -- { , f -- { , g} } } }
+}; &
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { , e -- { , f -- { g, } } } }
+}; &
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { , e -- {f , g  } } }
+}; &
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { e, f -- { , g  } } }
+}; &
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { , e -- {f , g  } } }
+}; &
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { , e -- { f  -- { , g} } } }
+}; &
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { , e -- { f  -- {g , } } } }
+}; &
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { b , e -- { f  } } }
+}; \\
+&&&&&&&\\
+\hline
+&&&&&&&\\
+\aaaaabbbbb
+&\aaaababbbb
+&\aaabaabbbb
+&\aabaaabbbb
+&\aaabaabbbb
+&\aaaabbabbb
+&\aaabababbb
+&\aabaababbb\\
+&&&&&&&\\
+\hline
+(h) 1214 & ({\i}) 1213 & (i) 1212 & (j) 1211 & (k) 1134 & (l) 1133 & (m) 1132 & (n) 1131 \\
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { b , e -- { , f  } } }
+};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { b , e -- { f  } } }
+};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{e -- { f -- {,b}, g}} 
+};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{e -- { b -- c, g}} 
+};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { b , e -- { , f  } } }
+};& 
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{ a -- { b , e -- { f  } } }
+};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{e -- { f -- {,b}, g}} 
+};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{e -- {  b -- c, g}} 
+};\\
+&&&&&&&\\
+\hline
+&&&&&&&\\
+\aabaaabbbb
+&\aabaababbb
+&\aaabbaabbb
+&\aababaabbb
+&\aabaaabbbb
+&\aabaababbb
+&\aaabbaabbb
+&\aababaabbb\\
+&&&&&&&\\
+\hline
+(o) 1124 & (\"o) 1123 & (p) 1122 & (r) 1121 & (s) 1114 & (\c{s}) 1113 & (t) 1112 & (u) 1111 \\
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{e -- { f -- {,b}, g}} 
+};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+b -- { a -- { , f -- { , g  } } } 
+};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+b -- { a -- { , f -- { g,   } } } 
+};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{e -- { f -- {c,b}}} 
+};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{e -- { b -- c, g}} 
+};& 
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{e -- { f -- {c,b}}} 
+};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{a -- { b -- c -- {,d}}} 
+};&
+\tikz [baseline=(a.base), tree layout, minimum number of children=2,
+sibling distance=5mm, level distance=5mm]
+\graph [nodes={circle, inner sep=0pt, minimum size=2mm, fill, as=}]{
+{a -- { b -- c -- {d}}} 
+};\\
+&&&&&&&\\
+\hline
+&&&&&&&\\
+\aaabbaabbb
+&\aaaabbbabb
+&\aaababbabb
+&\aabaabbabb
+&\aababaabbb
+&\aabaabbabb
+&\aaabbababb
+&\aababababb \\
+&&&&&&&\\
+\hline
+\end{tabular}
+\caption{$\mathbf{S}_{4}$ ba\u{g}lam\i nda g\"undeme gelen ikili 
+ve k\"okl\"u a\u{g}a\c{c} yap\i lar{\i}}
+\end{table}
+
+
+\section{Bilimsel yaz\i nda olas\i l\i ksal evrim kuram{\i}}
 
 Olas\i l\i ksal evrim kuram{\i} (OEK) ile ilgili \c{c}al\i \c{s}m%
 alar\i n say{\i}s{\i} artmaktad\i r. \"Ozellikle, nicem dizgeleri%

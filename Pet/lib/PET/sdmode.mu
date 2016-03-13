@@ -34,14 +34,6 @@ F_asil_aug(1):=Mat::stackMatrix(F_asil_aug(1)
 
 
 /* ********************************* */
-/* Esneklikli genisletilmis birinci  */ 
-/* katsayi dizeyinin belirtimi       */
-/* ********************************* */
-
-F_asil_faug(1):=bita*Mat::identity(n):
-
-
-/* ********************************* */
 /* bita belirleyim  		     */ 
 /* ********************************* */
 

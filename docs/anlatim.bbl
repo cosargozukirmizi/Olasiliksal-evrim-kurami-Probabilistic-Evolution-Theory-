@@ -1,5 +1,12 @@
 \begin{thebibliography}{1}
 
+\bibitem{Munthe-Kaas2013}
+Hans~Z. Munthe-Kaas and Alexander Lundervold.
+\newblock On post-lie algebras, lie--butcher series and moving frames.
+\newblock {\em Foundations of Computational Mathematics}, 13(4):583--613, 2013.
+\newblock \href {http://dx.doi.org/10.1007/s10208-013-9167-7}
+  {\path{doi:10.1007/s10208-013-9167-7}}.
+
 \bibitem{p1}
 Co\c{s}ar G\"oz\"uk{\i}rm{\i}z{\i} and Metin Demiralp.
 \newblock Probabilistic evolution approach for the solution of explicit
