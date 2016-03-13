@@ -371,8 +371,9 @@ in birinci de\u{g}i\c{s}imleri ise A000245 olarak ka\-y{\i}tl{\i}%
 d{\i}r. Bu \c{c}al\i \c{s}ma ba\u{g}lam\i nda g\"undeme gelen kat%
 say\i lar dizilimi ise A262180 olarak kaydedilmi\c{s}tir. %
 
-$\mathbf{T}_{j}$ i\c{c}in A000108($j$+1) adet azalmayan dizilim o%
-lu\c{s}maktad\i r. Bu di\-zi\-lim\-le\-rin tamsay{\i} katsay\i la%
+Irakg\"or\"ur dizeyi $\mathbf{T}_{j}$ i\c{c}in A000108($j$+1) %
+adet a\-zal\-ma\-yan di\-zi\-lim o\-lu\c{s}\-mak\-ta\-d\i r. Bu %
+di\-zi\-lim\-le\-rin tamsay{\i} katsay\i la%
 r\i n{\i} i\c{c}eren katsay{\i} dizilimi ise \"o\-zel kabarc\i kl%
 {\i} s\i ralay\i \c{s}{\i} kul\-la\-narak belirlenebilir. Bu kats%
 ay{\i} dizilimi, $\mathbf{T}_{j-1}$ i\c{c}in olu\c{s}turulan kats%
@@ -1010,83 +1011,66 @@ $\mathbf{S}_{j+1}$ i\c{c}inde bulunma\-s{\i}d{\i}r. Ge\-ri kalan %
 $\mathbf{S}_{j}$ ile ili\c{s}kilendi\-ri\-le\-bil\-me\-si\-ne kar%
 \c{s}\i n daha \c{c}apra\c{s}\i k yap\i dad\i r. %
 
-Bir yaz\i m olgusu olarak %
-%------------------------------(23)-----------------------------------%
-\begin{equation}
- \mathbf{S}_{j} \equiv \left(\mathbf{F},\mathbf{a}\right)^{dj}
-\end{equation}
-%------------------------------(23)-----------------------------------%
-g\"osterilimi kullan\i lacakt\i r. \"Usteldeki $d$ simgesi d\"ord%
-\"ulle\c{s}tirimi \c{c}a\u{g}r\i \c{}st\i rmakta, bu simgenin yan%
-\i ndaki say\i l ise ka\c{c}\i nc{\i} d\"ord\"ulle\c{s}ti\-ril\-m%
-i\c{s} \i rakg\"or\"ur dizeyi oldu\u{g}unu vurgulamaktad\i r. \.I%
-kinci d\"ord\"ulle\c{s}tirilmi\c{s} \i rakg\"or\"ur dizeyi, birin%
+\.Ikinci d\"ord\"ulle\c{s}tirilmi\c{s} \i rakg\"or\"ur dizeyi, birin%
 cisi bi\c{c}iminden %
-%------------------------------(24)-----------------------------------%
+%------------------------------(23)-----------------------------------%
 \begin{equation}
- \left(\mathbf{F},\mathbf{a}\right)^{d2} = 
- \lfloor \mathbf{F} , \left(\mathbf{F},
- \mathbf{a}\right)^{d1}\mathbf{a} \rceil
+ \mathbf{S}_{2} = 
+ \lfloor \mathbf{F} , \mathbf{S}_{1}\mathbf{a} \rceil
  + \lfloor \mathbf{F} , 
- \mathbf{a} \rceil \left(\mathbf{F},\mathbf{a}\right)^{d1}
+ \mathbf{a} \rceil \mathbf{S}_{1}
 \end{equation}
-%------------------------------(24)-----------------------------------%
+%------------------------------(23)-----------------------------------%
 olarak yaz\i labilir. Elbette %
-$\left(\mathbf{F},\mathbf{a}\right)^{dj}$ dizeyleri aras\i ndaki %
+$\mathbf{S}_{j}$ dizeyleri aras\i ndaki %
 olas{\i} ili\c{s}kilendirimler e\c{s}siz de\u{g}ildir. Burada \"o%
 nerilen, olas{\i} ili\c{s}kilendirim bi\c{c}imlerinden yaln{\i}zc%
-a biridir. $\left(\mathbf{F},\mathbf{a}\right)^{d3}$ i\-\c{c}in i%
-se gerek $\left(\mathbf{F},\mathbf{a}\right)^{d2}$ ve gerek %
-$\left(\mathbf{F},\mathbf{a}\right)^{d1}$ dizeylerini i\c{c}inde %
+a biridir. $\mathbf{S}_{3}$ i\-\c{c}in i%
+se gerek $\mathbf{S}_{2}$ ve gerek %
+$\mathbf{S}_{1}$ dizeylerini i\c{c}inde %
 bar\i nd\i ran %
-%------------------------------(25)-----------------------------------%
+%------------------------------(24)-----------------------------------%
 \begin{equation}
- \left(\mathbf{F},\mathbf{a}\right)^{d3} =
+ \mathbf{S}_{3} =
  \lfloor \mathbf{F} , \mathbf{a} \rceil 
- \left(\mathbf{F},\mathbf{a}\right)^{d2}
- + 2 \lfloor \mathbf{F} , \left(\mathbf{F},%
- \mathbf{a}\right)^{d1}\mathbf{a} \rceil
- \left(\mathbf{F},\mathbf{a}\right)^{d1}
- + \lfloor \mathbf{F} , \left(\mathbf{F},%
- \mathbf{a}\right)^{d2}\mathbf{a} \rceil
+ \mathbf{S}_{2}
+ + 2 \lfloor \mathbf{F} , \mathbf{S}_{1}\mathbf{a} \rceil
+ \mathbf{S}_{1}
+ + \lfloor \mathbf{F} , \mathbf{S}_{2}\mathbf{a} \rceil
 \end{equation}
-%------------------------------(25)-----------------------------------%
+%------------------------------(24)-----------------------------------%
 ili\c{s}kilendirimi ortaya konulabilir. Bir sonraki dizey ise %
-%------------------------------(26)-----------------------------------%
+%------------------------------(25)-----------------------------------%
 \begin{equation}
- \left(\mathbf{F},\mathbf{a}\right)^{d4} = 
+ \mathbf{S}_{4} = 
  \lfloor \mathbf{F} , \mathbf{a} \rceil 
- \left(\mathbf{F},\mathbf{a}\right)^{d3}
- + 3 \lfloor \mathbf{F} , \left(\mathbf{F},%
- \mathbf{a}\right)^{d2}\mathbf{a} \rceil
+ \mathbf{S}_{3}
+ + 3 \lfloor \mathbf{F} , \mathbf{S}_{2}\mathbf{a} \rceil
  \lfloor \mathbf{F} , \mathbf{a} \rceil 
  + 3 \lfloor \mathbf{F} , \lfloor \mathbf{F} , 
  \mathbf{a} \rceil \mathbf{a} \rceil
- \left(\mathbf{F},\mathbf{a}\right)^{d2}
- + \lfloor \mathbf{F} , \left(\mathbf{F},%
- \mathbf{a}\right)^{d3}\mathbf{a} \rceil
+ \mathbf{S}_{2}
+ + \lfloor \mathbf{F} , \mathbf{S}_{3}\mathbf{a} \rceil
 \end{equation}
-%------------------------------(26)-----------------------------------%
+%------------------------------(25)-----------------------------------%
 yap\i s\i ndad\i r. Bu bi\c{c}imde ilerlenebilir. Bir sonraki diz%
 ey ise %
-%------------------------------(27)-----------------------------------%
+%------------------------------(26)-----------------------------------%
 \begin{eqnarray}
- \left(\mathbf{F},\mathbf{a}\right)^{d5} &=&
+ \mathbf{S}_{5} &=&
  \lfloor \mathbf{F} , \mathbf{a} \rceil 
- \left(\mathbf{F},\mathbf{a}\right)^{d4}
- + 4 \lfloor \mathbf{F} , \left(\mathbf{F},%
- \mathbf{a}\right)^{d3}\mathbf{a} \rceil
+ \mathbf{S}_{4}
+ + 4 \lfloor \mathbf{F} , \mathbf{S}_{3}\mathbf{a} \rceil
  \lfloor \mathbf{F} , \mathbf{a} \rceil
- + 6 \lfloor \mathbf{F} , \left(\mathbf{F},%
- \mathbf{a}\right)^{d2}\mathbf{a} \rceil
- \left(\mathbf{F},\mathbf{a}\right)^{d2} \nonumber\\
+ + 6 \lfloor \mathbf{F} , \mathbf{S}_{2}\mathbf{a} \rceil
+ \mathbf{S}_{2} \nonumber\\
  &+& 4  \lfloor \mathbf{F} ,  \lfloor \mathbf{F} , 
  \mathbf{a} \rceil  
- \mathbf{a} \rceil \left(\mathbf{F},\mathbf{a}\right)^{d3}
+ \mathbf{a} \rceil \mathbf{S}_{3}
  +  \lfloor \mathbf{F} , %
- \left(\mathbf{F},\mathbf{a}\right)^{d4}\mathbf{a} \rceil
+ \mathbf{S}_{4}\mathbf{a} \rceil
 \end{eqnarray}
-%------------------------------(27)-----------------------------------%
+%------------------------------(26)-----------------------------------%
 yap\i s\i nda g\"undeme gelir. Bir sonraki di\-zeyin yap{\i}s{\i}%
 n{\i}n g\"ozle ve ka\u{g}\i t kalemle be\-lirleni\c{s}i, terim sa%
 y\i s\i n\i n \c{c}oklu\u{g}undan dolay{\i} zor\-dur. Ya\-p\i lma%
@@ -1096,89 +1080,88 @@ zle denetlenebilen yap\i n\i n nas\i l bir \"or\"unt\"u or\-taya %
 t\"u kullan\i larak di\u{g}er dizeyler de elde edilebilir. Katsay%
 \i lar olarak, ikiterimli a\c{c}\i l\i m{\i} kat\-say\i lar{\i} g%
 \"undemdedir. Terimler ise, daha k\"u\c{c}\"uk s\i rasay\i l{\i} %
-$\left(\mathbf{F},\mathbf{a}\right)^{dj}$ dizey\-leri\-ne ol\-duk%
+$\mathbf{S}_{j}$ dizey\-leri\-ne ol\-duk%
 \c{c}a somut kurallarla ba\u{g}l\i d\i r. Son\-ra\-ki iki dizey i%
 \c{c}in, \"or\"unt\"u temel al\i narak, \"o\-ne\-rilen yap\i lar %
 a\c{s}a\u{g}\i daki gibidir. %
-%------------------------------(28)-----------------------------------%
+%------------------------------(27)-----------------------------------%
 \begin{eqnarray}
- \left(\mathbf{F},\mathbf{a}\right)^{d6} &=&
+ \mathbf{S}_{6} &=&
  \lfloor \mathbf{F} , \mathbf{a} \rceil
- \left(\mathbf{F},\mathbf{a}\right)^{d5}
- + 5 \lfloor \mathbf{F} , \left(\mathbf{F},%
-\mathbf{a}\right)^{d4}\mathbf{a} \rceil
+ \mathbf{S}_{5}
+ + 5 \lfloor \mathbf{F} , \mathbf{S}_{4}\mathbf{a} \rceil
  \lfloor \mathbf{F} , \mathbf{a} \rceil 
  + 5 \lfloor \mathbf{F} , \lfloor \mathbf{F} , 
  \mathbf{a} \rceil \mathbf{a} \rceil
- \left(\mathbf{F},\mathbf{a}\right)^{d4}
+ \mathbf{S}_{4}
  + 10  \lfloor \mathbf{F} ,  \lfloor \mathbf{F} , 
  \lfloor \mathbf{F} 
  , \mathbf{a} \rceil \mathbf{a} \rceil \mathbf{a} \rceil 
- \left(\mathbf{F},\mathbf{a}\right)^{d3} \nonumber\\
+ \mathbf{S}_{3} \nonumber\\
  &+& 10  \lfloor \mathbf{F} ,  \lfloor \mathbf{F} , 
- \left(\mathbf{F},\mathbf{a}\right)^{d3}\mathbf{a} 
+ \mathbf{S}_{3}\mathbf{a} 
  \rceil\mathbf{a} \rceil 
  \lfloor \mathbf{F} , \mathbf{a} \rceil
  +  \lfloor \mathbf{F} ,  
- \left(\mathbf{F},\mathbf{a}\right)^{d5}\mathbf{a} \rceil
+ \mathbf{S}_{5}\mathbf{a} \rceil
 \label{eq:dd6}
 \end{eqnarray}
+%------------------------------(27)-----------------------------------%
 %------------------------------(28)-----------------------------------%
-%------------------------------(29)-----------------------------------%
 \begin{eqnarray}
- \left(\mathbf{F},\mathbf{a}\right)^{d7} &=&
+ \mathbf{S}_{7} &=&
  \lfloor \mathbf{F} , \mathbf{a} \rceil
- \left(\mathbf{F},\mathbf{a}\right)^{d6}
+ \mathbf{S}_{6}
  + 6 \lfloor \mathbf{F} , 
- \left(\mathbf{F},\mathbf{a}\right)^{d5}\mathbf{a} \rceil
+ \mathbf{S}_{5}\mathbf{a} \rceil
  \lfloor \mathbf{F} , \mathbf{a} \rceil 
  + 6 \lfloor \mathbf{F} , 
  \lfloor \mathbf{F} , \mathbf{a} \rceil \mathbf{a} \rceil
- \left(\mathbf{F},\mathbf{a}\right)^{d5}
+ \mathbf{S}_{5}
  + 15  \lfloor \mathbf{F} ,  
  \lfloor \mathbf{F} , \lfloor \mathbf{F} 
  , \mathbf{a} \rceil \mathbf{a} \rceil \mathbf{a} \rceil 
- \left(\mathbf{F},\mathbf{a}\right)^{d4} \nonumber\\
+ \mathbf{S}_{4} \nonumber\\
  &+& 15  \lfloor \mathbf{F} ,  
  \lfloor \mathbf{F} , 
- \left(\mathbf{F},\mathbf{a}\right)^{d4}\mathbf{a} 
+ \mathbf{S}_{4}\mathbf{a} 
  \rceil\mathbf{a} \rceil 
  \lfloor \mathbf{F} , \mathbf{a} \rceil
  + 20 \lfloor \mathbf{F} , 
- \left(\mathbf{F},\mathbf{a}\right)^{d3}\mathbf{a} \rceil
- \left(\mathbf{F},\mathbf{a}\right)^{d3}
+ \mathbf{S}_{3}\mathbf{a} \rceil
+ \mathbf{S}_{3}
  +  \lfloor \mathbf{F} , 
- \left(\mathbf{F},\mathbf{a}\right)^{d6}\mathbf{a} \rceil \, .
+ \mathbf{S}_{6}\mathbf{a} \rceil \, .
  \label{eq:dd7}
 \end{eqnarray}
-%------------------------------(29)-----------------------------------%
+%------------------------------(28)-----------------------------------%
 (\ref{eq:dd6}) ve (\ref{eq:dd7}) ba\u{g}\i nt\i lar{\i} ile ilgil%
 i do\u{g}rulay\i \c{s} \c{c}al\i \c{s}mas{\i} yap\i lacakt\i r. A%
 ma kolay s\i nay\i \c{s}lar hemen yap\i labilir. \"Or\-ne\u{g}in %
-$\left(\mathbf{F},\mathbf{a}\right)^{d6}$ dizeyinin %
-%------------------------------(30)-----------------------------------%
+$\mathbf{S}_{6}$ dizeyinin %
+%------------------------------(29)-----------------------------------%
 \begin{equation}
 10  \lfloor \mathbf{F} ,  \lfloor \mathbf{F} , \lfloor \mathbf{F} 
  , \mathbf{a} \rceil \mathbf{a} \rceil \mathbf{a} \rceil 
- \left(\mathbf{F},\mathbf{a}\right)^{d3}                                                                     
+ \mathbf{S}_{3}                                                                     
 \end{equation}
-%------------------------------(30)-----------------------------------%
+%------------------------------(29)-----------------------------------%
 terimini inceleme alt\i na alal\i m. Bu terimin yapt\i \u{g}{\i} %
 i\c{s}lem, \"u\c{c}\"unc\"u d\"ord\"ulle\c{s}tirilmi\c{s} \i rakg%
 \"or\"ur dizeyini soldan \"u\c{c}l\"u d\"ord\"ulle\c{s}tirim ile %
 \c{c}arpmakt\i r. Bu ba\u{g}lamda %
-%------------------------------(31)-----------------------------------%
+%------------------------------(30)-----------------------------------%
 \begin{equation}
   1\quad 2\quad 3 \rightarrow 1\quad 1\quad 1\quad 4\quad 5\quad 6
 \end{equation}
-%------------------------------(31)-----------------------------------%
+%------------------------------(30)-----------------------------------%
 olmaktad\i r. Soldan \"u\c{c}l\"u d\"ord\"ulle\c{s}\-ti\-rim ile %
 \c{c}arp\i m i\c{s}lemi bu bi\c{c}imde tan\i mland\i \u{g}\i na g%
 \"ore katsay{\i} da tutarl{\i} olmal\i d\i r. \"O\-zel kabarc\i k%
 l{\i} s\i rabozu\c{s} ile bu dizilimin e\c{s}de\u{g}erlilik k\"um%
 esinde 10 adet dizilim oldu\u{g}u g\"osterilebilir. Bu di\-ziliml%
 er %
-%------------------------------(32)-----------------------------------%
+%------------------------------(31)-----------------------------------%
 \begin{eqnarray}
  S_{1,1,1,4,5,6} &=& \left\{[1,1,1,4,5,6],[1,1,3,1,5,6],%
 [1,2,1,1,5,6],[1,1,3,4,1,6],[1,1,3,4,5,1],%
@@ -1186,27 +1169,27 @@ er %
  &&\left.[1,2,1,4,5,1],[1,2,3,1,1,6],%
 [1,2,3,1,5,1],[1,2,3,4,1,1]\right\}
 \end{eqnarray}
-%------------------------------(32)-----------------------------------%
+%------------------------------(31)-----------------------------------%
 dizilimleridir. Dolay\i s\i yla, bu kat\-k{\i} i\-\c{c}in tu\-tar%
 l{\i}l\i k s\"oz konusudur. %
 
 E\u{g}er 
-%------------------------------(33)-----------------------------------%
+%------------------------------(32)-----------------------------------%
 \begin{equation}
- \left(\mathbf{F},\mathbf{a}\right)^{d0} = \mathbf{I}
+ \mathbf{S}_{0} = \mathbf{I}
 \end{equation}
-%------------------------------(33)-----------------------------------%
+%------------------------------(32)-----------------------------------%
 oldu\u{g}u g\"oz \"on\"unde bulundurulursa, 
-%------------------------------(34)-----------------------------------%
+%------------------------------(33)-----------------------------------%
 \begin{equation}
- \left(\mathbf{F},\mathbf{a}\right)^{dj} = \sum_{k=0}^{j-1} 
+ \mathbf{S}_{j} = \sum_{k=0}^{j-1} 
  {j-1 \choose k}  \lfloor \mathbf{F} , 
- \left(\mathbf{F},\mathbf{a}\right)^{dk}\mathbf{a} \rceil
- \left(\mathbf{F},\mathbf{a}\right)^{d(j-1-k)} \, ,  
+ \mathbf{S}_{k}\mathbf{a} \rceil
+ \mathbf{S}_{(j-1-k)} \, ,  
 \quad j=1,2,\ldots
 \label{eq:yoo}
 \end{equation}
-%------------------------------(34)-----------------------------------%
+%------------------------------(33)-----------------------------------%
 oldu\u{g}u g\"or\"ulebilir. (\ref{eq:yoo}) ba\u{g}\i nt\i s{\i},
 bir dizeycil \"ozyineleyi\c{s}tir.
 Bu \"ozyineleyi\c{s} do\u{g}rusal
