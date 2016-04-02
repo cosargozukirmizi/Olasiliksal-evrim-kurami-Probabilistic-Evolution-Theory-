@@ -40,17 +40,6 @@ F_asil_aug(1):=Mat::stackMatrix(F_asil_aug(1)
 bita := 2/(7*n+8)*linalg::tr(F_asil(1)):
 
 /* ********************************* */
-/* bita'nin sifirlanimi celiski ure- */
-/* tebilecek bir olgudur. Dolayisiy- */
-/* sifirlanima karsi onlem alimi ge- */
-/* reklidir.	  		     */ 
-/* ********************************* */
-
-if bita = 0 then
- bita := bita + 0.00001:
-end_if:
-
-/* ********************************* */
 /* Ikinci katsayi dizeyinin bulunumu */
 /* ********************************* */
 

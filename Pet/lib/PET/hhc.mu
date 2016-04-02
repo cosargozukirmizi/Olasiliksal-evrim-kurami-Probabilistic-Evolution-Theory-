@@ -15,11 +15,17 @@ begin
  hhc_a_aug:=linalg::stackMatrix(hhc_by,[ksi]):
  hhc_summand:=0:
  hhc_ret:=0:
- for hhc_j from 0 to hhc_k do 
-    hhc_summand:=1/(hhc_j!)\
-    *(((1-exp(bita*t))/(-bita))^hhc_j)*Squtelmat::S(hhc_j,hhc_a_aug, hhc_f)
-    *hhc_a_aug:
-  hhc_ret:=hhc_ret+hhc_summand:
+ for hhc_j from 0 to hhc_k do   
+    if(_equal(bita,0)) then
+     hhc_summand:=1/(hhc_j!)\
+     *(t^hhc_j)*Squtelmat::S(hhc_j,hhc_a_aug, hhc_f)
+     *hhc_a_aug:
+    else
+     hhc_summand:=1/(hhc_j!)\
+     *(((1-exp(bita*t))/(-bita))^hhc_j)*Squtelmat::S(hhc_j,hhc_a_aug, hhc_f)
+     *hhc_a_aug:
+    end_if:
+   hhc_ret:=hhc_ret+hhc_summand:
  end_for: 
  return(exp(bita*t)*hhc_ret):
 end_proc:
